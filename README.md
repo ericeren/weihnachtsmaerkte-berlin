@@ -38,12 +38,12 @@ Mit `npx expo start` läuft die App über Expo Go auf dem iPhone. `npx expo expo
 
 ## Entstehung
 
-Die Idee stammt von Eric Eren. Wer auf einem Weihnachtsmarkt steht und weiterziehen will, soll schnell sehen, welcher Markt in der Nähe gerade offen hat. Den Code hat Claude geschrieben, ein KI-Assistent von Anthropic, nach Erics Vorgaben. Auch den Abgleich der Daten mit den Seiten der Veranstalter hat Claude gemacht. Eric hat die App auf dem iPhone und im Browser getestet und über Aufbau, Texte und Funktionen entschieden.
+Die Idee stammt von Eric Eren. Wer auf einem Weihnachtsmarkt steht und weiterziehen will, soll schnell sehen, welcher Markt in der Nähe gerade offen hat. Den Code hat Claude geschrieben, ein KI-Assistent von Anthropic, nach Erics Vorgaben. Auch der Abgleich der Daten mit den Seiten der Veranstalter und die Kurzbeschreibungen der Märkte stammen von Claude. Eric hat die App auf dem iPhone und im Browser getestet und über Aufbau, Texte und Funktionen entschieden.
 
 ## Lizenzen
 
 - Code: MIT, siehe [LICENSE](LICENSE).
-- Daten in `src/data/markets.json`: Creative Commons Namensnennung (CC BY) wie der Ausgangsdatensatz. Quelle: Senatsverwaltung für Wirtschaft, Energie und Betriebe, aufbereitet von der ODIS, ergänzt von Eric Eren.
+- Daten und Texte in `src/data/markets.json`: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Namensnennung: Senatsverwaltung für Wirtschaft, Energie und Betriebe (Ausgangsdatensatz unter CC BY), aufbereitet von der ODIS, ergänzt von Eric Eren.
 - Fotos in `assets/markets`: von Wikimedia Commons unter eigenen Lizenzen, siehe [BILDNACHWEIS.md](assets/markets/BILDNACHWEIS.md). Die MIT-Lizenz gilt für sie nicht.
 - Kartenmaterial im Web: © OpenStreetMap-Mitwirkende, Lizenz ODbL.
 
