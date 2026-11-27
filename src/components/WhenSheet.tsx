@@ -1,6 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, Easing, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useMemo, useRef, useState, type ComponentRef } from 'react';
+import { Animated, Easing, Modal, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { clock, dayName } from '../lib/format';
@@ -115,11 +115,22 @@ export default function WhenSheet({ visible, onClose }: Props) {
         ? `Zeigt Märkte, die ${tagWort(sel.date, now.date)} um ${clock(sel.minutes)} Uhr geöffnet haben.`
         : `Zeigt Märkte, die ${tagWort(sel.date, now.date)} geöffnet haben.`;
 
+  // Im Web erzeugt Modal ein Dialogelement ohne Namen. Bildschirmleser sollen ansagen, worum es geht.
+  const rootRef = useRef<ComponentRef<typeof View>>(null);
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !mounted) return;
+    const t = setTimeout(() => {
+      const el = rootRef.current as unknown as HTMLElement | null;
+      el?.closest?.('[role="dialog"]')?.setAttribute('aria-label', 'Datum und Uhrzeit wählen');
+    }, 0);
+    return () => clearTimeout(t);
+  }, [mounted]);
+
   return (
     <Modal visible={mounted} transparent animationType="none" onRequestClose={close}>
-      <View style={styles.root}>
+      <View style={styles.root} ref={rootRef}>
         <Animated.View style={[styles.backdrop, { opacity: anim }]}>
-          <Pressable style={StyleSheet.absoluteFill} onPress={close} accessibilityLabel="Schließen" />
+          <Pressable style={StyleSheet.absoluteFill} onPress={close} accessibilityRole="button" accessibilityLabel="Schließen" />
         </Animated.View>
 
         <Animated.View
@@ -166,7 +177,7 @@ export default function WhenSheet({ visible, onClose }: Props) {
                   }}
                   style={[styles.segBtn, art === a && styles.segOn]}
                   accessibilityRole="tab"
-                  accessibilityState={{ selected: art === a }}
+                  aria-selected={art === a}
                 >
                   <Text style={[styles.segText, art === a && styles.segTextOn]}>
                     {a === 'zeit' ? 'Offen um' : 'Offen am'}
@@ -207,6 +218,8 @@ export default function WhenSheet({ visible, onClose }: Props) {
                     ]}
                     accessibilityRole="button"
                     accessibilityState={{ selected: on }}
+                    // im Web als gedrückter Umschalter, accessibilityState kommt dort nicht an
+                    {...({ 'aria-pressed': on } as object)}
                   >
                     <Text style={[styles.quickText, on && styles.quickTextOn]} numberOfLines={1}>
                       {q.label}

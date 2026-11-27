@@ -33,7 +33,12 @@ function SwitchRow({ label, value, onChange }: { label: string; value: boolean; 
   return (
     <View style={styles.switchRow}>
       <Text style={styles.switchLabel}>{label}</Text>
-      <Switch value={value} onValueChange={onChange} trackColor={{ true: colors.rot, false: colors.linie }} />
+      <Switch
+        value={value}
+        onValueChange={onChange}
+        trackColor={{ true: colors.rot, false: colors.linie }}
+        accessibilityLabel={label}
+      />
     </View>
   );
 }
@@ -103,7 +108,7 @@ export default function FilterScreen() {
               onPress={() => setSheet(true)}
               style={styles.whenMain}
               accessibilityRole="button"
-              accessibilityLabel={moment ? `Zeitpunkt ${moment}, ändern` : 'Datum und Uhrzeit wählen'}
+              accessibilityHint="Öffnet die Auswahl für Datum und Uhrzeit"
             >
               <Ionicons name="calendar-outline" size={24} color={moment ? colors.rot : colors.tinte} />
               <View style={styles.whenTexts}>

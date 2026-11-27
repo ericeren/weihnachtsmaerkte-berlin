@@ -36,12 +36,14 @@ const Z: Record<StatusTone, number> = { open: 300, soon: 200, later: 100, ended:
 
 function pinIcon(tone: StatusTone, selected: boolean): L.DivIcon {
   const c = PIN[tone];
-  const s = selected ? 38 : 28;
+  // Zweites Merkmal neben der Farbe: Märkte an anderen Tagen sind kleiner
+  const klein = tone === 'later' || tone === 'ended';
+  const s = selected ? 38 : klein ? 22 : 28;
   const html =
     `<div style="width:${s}px;height:${s}px;box-sizing:border-box;border-radius:50%;` +
     `background:${c.bg};border:${selected ? 3 : 2}px solid ${c.border};` +
     `box-shadow:0 3px 10px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;` +
-    `color:${c.star};font:700 ${selected ? 19 : 14}px/1 system-ui,sans-serif;cursor:pointer">★</div>`;
+    `color:${c.star};font:700 ${selected ? 19 : klein ? 11 : 14}px/1 system-ui,sans-serif;cursor:pointer" aria-hidden="true">★</div>`;
   return L.divIcon({ className: 'wm-pin', html, iconSize: [s, s], iconAnchor: [s / 2, s / 2] });
 }
 
@@ -62,6 +64,12 @@ export default function MarketMapWeb() {
   const tones = useMemo(() => {
     const t: Record<string, StatusTone> = {};
     for (const m of markets) t[m.id] = fest ? 'open' : statusNow(m, now).tone;
+    return t;
+  }, [markets, now, fest]);
+  // Was die Farbe zeigt, steht auch im Namen des Sterns, für Bildschirmleser
+  const namen = useMemo(() => {
+    const t: Record<string, string> = {};
+    for (const m of markets) t[m.id] = `${m.name}, ${fest ?? statusNow(m, now).label}`;
     return t;
   }, [markets, now, fest]);
 
@@ -120,9 +128,20 @@ export default function MarketMapWeb() {
           lastMarkerPress.current = Date.now();
           setSelectedId(m.id);
         })
-        .addTo(layer);
+        // Tastatur: Leaflet macht die Sterne fokussierbar, öffnet aber nur Popups mit Enter. Hier öffnet Enter oder die Leertaste die Vorschau.
+        .on('keypress', (e: L.LeafletKeyboardEvent) => {
+          const k = e.originalEvent.key;
+          if (k === 'Enter' || k === ' ') {
+            e.originalEvent.preventDefault();
+            lastMarkerPress.current = Date.now();
+            setSelectedId(m.id);
+          }
+        })
+        .addTo(layer)
+        .getElement()
+        ?.setAttribute('aria-label', namen[m.id]);
     }
-  }, [markets, tones, selectedId, setSelectedId, div]);
+  }, [markets, tones, namen, selectedId, setSelectedId, div]);
 
   // Eigener Standort als blauer Punkt
   useEffect(() => {
@@ -199,7 +218,7 @@ export default function MarketMapWeb() {
               <Text style={styles.legendText}>Heute später</Text>
             </View>
             <View style={styles.legendRow}>
-              <View style={[styles.legendDot, { backgroundColor: '#6B7079' }]} />
+              <View style={[styles.legendDot, styles.legendDotKlein, { backgroundColor: '#6B7079' }]} />
               <Text style={styles.legendText}>Andere Tage</Text>
             </View>
           </>
@@ -251,6 +270,7 @@ const styles = StyleSheet.create({
   },
   legendRow: { flexDirection: 'row', alignItems: 'center', marginVertical: 2 },
   legendDot: { width: 12, height: 12, borderRadius: 6, marginRight: 7 },
+  legendDotKlein: { width: 9, height: 9, borderRadius: 4.5, marginLeft: 1.5, marginRight: 8.5 },
   legendText: { fontSize: 13, color: colors.tinte },
   tools: { position: 'absolute', right: 10, top: 10, gap: 8, zIndex: 2 },
   tool: {

@@ -173,7 +173,7 @@ export function Tabelle({ kopf, zeilen }: { kopf: string[]; zeilen: (string | nu
         onPress={() => setOffen(!offen)}
         style={styles.tabelleKnopf}
         accessibilityRole="button"
-        accessibilityState={{ expanded: offen }}
+        aria-expanded={offen}
         hitSlop={6}
       >
         <Ionicons name={offen ? 'chevron-up' : 'chevron-down'} size={16} color={colors.rot} />

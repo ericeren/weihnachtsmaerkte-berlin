@@ -26,6 +26,18 @@ Am 27.11.2026 wurden Eintrittspreise, Öffnungszeiten und Links mit den Seiten d
 - Auf dem iPhone Apple Karten über react-native-maps, verteilt über Expo Go und EAS Update.
 - Eine anonyme Besucherstatistik der Webseite mit [Umami](https://umami.is) Cloud, Datenregion EU, ohne Cookies. In der App lässt sie sich unter „Über die App“ abschalten.
 
+## Barrierefreiheit
+
+Geprüft am 27.11.2026 mit [axe-core](https://github.com/dequelabs/axe-core) 4.14 gegen die Regeln von WCAG 2.2 Stufe AA. Ergebnis: keine Verstöße auf der Startseite mit Karte und mit Liste, auf der Marktseite, bei den Filtern, unter „Über die App“, unter „Saison in Zahlen“ und im Fenster für Datum und Uhrzeit.
+
+- Alles, was die Karte zeigt, steht auch in der Liste. Bildschirmleser lesen zu jedem Stern den Namen und ob der Markt offen hat.
+- Die Farbe der Sterne ist nicht das einzige Merkmal: Märkte an anderen Tagen haben kleinere Sterne.
+- Zu jedem Säulendiagramm gibt es die Zahlen als Tabelle.
+- Die Webseite lässt sich mit der Tastatur bedienen, auch die Sterne auf der Karte. Der Fokus bleibt sichtbar.
+- Bei 320 Pixel Breite, das entspricht 400 Prozent Zoom, bricht der Inhalt um, ohne dass die Seite seitlich scrollt.
+
+Bekannte Grenzen: Die einzelnen Säulen der Diagramme lassen sich nur antippen, nicht mit der Tastatur anwählen. Die Tabellen enthalten dieselben Zahlen. Die App auf dem iPhone ist mit VoiceOver noch nicht vollständig durchgetestet.
+
 ## Selbst starten
 
 Nötig ist [Node.js](https://nodejs.org) in der LTS-Version.

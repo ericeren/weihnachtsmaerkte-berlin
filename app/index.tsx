@@ -92,6 +92,7 @@ export default function Home() {
             onPress={() => router.push('/info')}
             hitSlop={10}
             style={styles.infoBtn}
+            accessibilityRole="button"
             accessibilityLabel="Über die App und Datenquellen"
           >
             <Ionicons name="information-circle-outline" size={28} color={colors.tinte} />
@@ -107,7 +108,7 @@ export default function Home() {
                 onPress={() => setView(v)}
                 style={[styles.segBtn, view === v && styles.segBtnOn]}
                 accessibilityRole="tab"
-                accessibilityState={{ selected: view === v }}
+                aria-selected={view === v}
               >
                 <Ionicons
                   name={v === 'karte' ? 'map-outline' : 'list-outline'}

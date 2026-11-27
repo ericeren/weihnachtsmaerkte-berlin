@@ -24,21 +24,26 @@ const Pin = memo(function Pin({
   tone,
   selected,
   onPress,
+  name,
 }: {
   m: Market;
   tone: StatusTone;
   selected: boolean;
   onPress: (id: string) => void;
+  /** Name mit Stand für VoiceOver */
+  name: string;
 }) {
   const c = PIN[tone];
-  const size = selected ? 38 : 28;
+  // Zweites Merkmal neben der Farbe: Märkte an anderen Tagen sind kleiner
+  const klein = tone === 'later' || tone === 'ended';
+  const size = selected ? 38 : klein ? 22 : 28;
   return (
     <Marker
       coordinate={{ latitude: m.lat, longitude: m.lng }}
       onPress={() => onPress(m.id)}
       tracksViewChanges={false}
       zIndex={selected ? 1000 : tone === 'open' ? 3 : tone === 'soon' ? 2 : 1}
-      accessibilityLabel={m.name}
+      accessibilityLabel={name}
     >
       <View
         style={[
@@ -47,7 +52,7 @@ const Pin = memo(function Pin({
           selected && styles.pinSelected,
         ]}
       >
-        <Text style={[styles.pinStar, { color: c.star, fontSize: selected ? 19 : 14 }]}>★</Text>
+        <Text style={[styles.pinStar, { color: c.star, fontSize: selected ? 19 : klein ? 11 : 14 }]}>★</Text>
       </View>
     </Marker>
   );
@@ -66,6 +71,12 @@ export default function MarketMap() {
   const tones = useMemo(() => {
     const t: Record<string, StatusTone> = {};
     for (const m of markets) t[m.id] = fest ? 'open' : statusNow(m, now).tone;
+    return t;
+  }, [markets, now, fest]);
+  // Was die Farbe zeigt, steht auch im Namen des Sterns, für VoiceOver
+  const namen = useMemo(() => {
+    const t: Record<string, string> = {};
+    for (const m of markets) t[m.id] = `${m.name}, ${fest ?? statusNow(m, now).label}`;
     return t;
   }, [markets, now, fest]);
 
@@ -151,6 +162,7 @@ export default function MarketMap() {
             tone={tones[m.id]}
             selected={m.id === selectedId}
             onPress={onMarker}
+            name={namen[m.id]}
           />
         ))}
       </MapView>
@@ -167,7 +179,7 @@ export default function MarketMap() {
               <Text style={styles.legendText}>Heute später</Text>
             </View>
             <View style={styles.legendRow}>
-              <View style={[styles.legendDot, { backgroundColor: '#6B7079' }]} />
+              <View style={[styles.legendDot, styles.legendDotKlein, { backgroundColor: '#6B7079' }]} />
               <Text style={styles.legendText}>Andere Tage</Text>
             </View>
           </>
@@ -226,6 +238,7 @@ const styles = StyleSheet.create({
   },
   legendRow: { flexDirection: 'row', alignItems: 'center', marginVertical: 2 },
   legendDot: { width: 12, height: 12, borderRadius: 6, marginRight: 7 },
+  legendDotKlein: { width: 9, height: 9, borderRadius: 4.5, marginLeft: 1.5, marginRight: 8.5 },
   legendText: { fontSize: 13, color: colors.tinte },
   tools: { position: 'absolute', right: 10, top: 10, gap: 8 },
   tool: {

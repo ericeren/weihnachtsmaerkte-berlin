@@ -147,6 +147,14 @@ export default function Info() {
         </Text>
       ))}
 
+      <H>Barrierefreiheit</H>
+      <P>
+        Alles, was die Karte zeigt, steht auch in der Liste. Bildschirmleser lesen zu jedem Stern den Namen des Markts
+        und ob er gerade offen hat. Märkte, die erst an anderen Tagen öffnen, haben kleinere Sterne, damit man sie nicht
+        nur an der Farbe erkennt. Zu den Diagrammen unter „Saison in Zahlen“ gibt es die Zahlen als Tabelle. Die
+        Webseite lässt sich auch mit der Tastatur bedienen.
+      </P>
+
       <H>Fehler gefunden?</H>
       <P>
         Termine ändern sich manchmal kurzfristig. Maßgeblich sind immer die Angaben auf der Seite des jeweiligen

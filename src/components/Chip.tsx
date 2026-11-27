@@ -27,6 +27,9 @@ export default function Chip({ label, selected, onPress, icon, count, disabled, 
       disabled={disabled}
       accessibilityRole="button"
       accessibilityState={{ selected: !!selected, disabled: !!disabled }}
+      // im Web als gedrückter Umschalter, accessibilityState kommt dort nicht an
+      // Knöpfe ohne Auswahlzustand wie „Filter“ sind keine Umschalter
+      {...({ 'aria-pressed': selected === undefined ? undefined : !!selected, 'aria-disabled': !!disabled } as object)}
       style={({ pressed }) => [
         styles.chip,
         compact && styles.compact,

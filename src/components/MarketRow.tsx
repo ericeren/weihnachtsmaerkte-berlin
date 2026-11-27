@@ -29,7 +29,6 @@ function MarketRow({ m, now, day, distanceKm }: Props) {
       onPress={() => router.push(`/markt/${m.id}`)}
       style={({ pressed }) => [styles.row, pressed && styles.pressed]}
       accessibilityRole="button"
-      accessibilityLabel={`${m.name}, ${m.bezirk}, ${st.label}`}
     >
       <View style={[styles.bar, { backgroundColor: TONE_COLOR[st.tone] }]} />
       <View style={styles.main}>

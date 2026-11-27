@@ -19,6 +19,7 @@ function fmt(d: Date, mode: DateWheelProps['mode']): string {
 /** Ersatz für den Browser: das Auswahlrad gibt es nur auf dem iPhone. */
 export default function DateWheel({ value, mode, minimumDate, maximumDate, onChange }: DateWheelProps) {
   return createElement('input', {
+    'aria-label': mode === 'date' ? 'Datum' : 'Datum und Uhrzeit',
     type: mode === 'date' ? 'date' : 'datetime-local',
     value: fmt(value, mode),
     min: fmt(minimumDate, mode),
