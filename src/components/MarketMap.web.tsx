@@ -1,6 +1,7 @@
 import 'leaflet/dist/leaflet.css';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { router } from 'expo-router';
 import L from 'leaflet';
 import { createElement, useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
@@ -85,7 +86,14 @@ export default function MarketMapWeb() {
       maxZoom: 19,
       attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>-Mitwirkende',
     }).addTo(map);
-    map.attributionControl.setPrefix(false);
+    // Impressum leicht erreichbar: als Link vor der Quellenangabe, öffnet die Seite „Über die App“ ohne Neuladen
+    map.attributionControl.setPrefix('<a href="/info">Impressum</a>');
+    map.attributionControl.getContainer()?.addEventListener('click', (e) => {
+      const a = (e.target as HTMLElement | null)?.closest?.('a[href="/info"]');
+      if (!a) return;
+      e.preventDefault();
+      router.push('/info');
+    });
     map.attributionControl.setPosition('bottomleft');
     map.on('click', () => {
       if (Date.now() - lastMarkerPress.current > 400) setSelectedId(null);

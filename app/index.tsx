@@ -93,7 +93,7 @@ export default function Home() {
             hitSlop={10}
             style={styles.infoBtn}
             accessibilityRole="button"
-            accessibilityLabel="Über die App und Datenquellen"
+            accessibilityLabel="Über die App und Impressum"
           >
             <Ionicons name="information-circle-outline" size={28} color={colors.tinte} />
           </Pressable>

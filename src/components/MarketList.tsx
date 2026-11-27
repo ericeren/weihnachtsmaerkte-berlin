@@ -1,4 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { router } from 'expo-router';
 import { useCallback } from 'react';
 import { FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -65,6 +66,11 @@ export default function MarketList() {
           </ScrollView>
         </View>
       }
+      ListFooterComponent={
+        <Pressable onPress={() => router.push('/info')} style={styles.fuss} accessibilityRole="link" hitSlop={8}>
+          <Text style={styles.fussText}>Impressum und Datenschutz</Text>
+        </Pressable>
+      }
       ListEmptyComponent={
         <View style={styles.empty}>
           <Text style={styles.emptyTitle}>Keine Märkte für diese Auswahl</Text>
@@ -79,6 +85,8 @@ export default function MarketList() {
 }
 
 const styles = StyleSheet.create({
+  fuss: { alignSelf: 'center', paddingVertical: 18, paddingHorizontal: 12 },
+  fussText: { fontSize: 13, color: colors.grau, textDecorationLine: 'underline' },
   head: { paddingTop: 10, paddingBottom: 6, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: colors.linie },
   search: {
     flexDirection: 'row',

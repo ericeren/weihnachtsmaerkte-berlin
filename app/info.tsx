@@ -7,6 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Logo from '../src/components/Logo';
 import { BILDER, BY_ID, MARKETS, STAND } from '../src/data';
 import { dateNum } from '../src/lib/format';
+import { webLink } from '../src/lib/actions';
 import { IS_WEB, notify } from '../src/lib/notify';
 import { colors } from '../src/theme';
 
@@ -51,8 +52,14 @@ function Zaehlen() {
 }
 
 function A({ url, children }: { url: string; children: ReactNode }) {
+  // Im Web ein echter Link, sonst blockieren Browser wie Brave das Öffnen
   return (
-    <Text style={styles.link} onPress={() => Linking.openURL(url)} accessibilityRole="link">
+    <Text
+      style={styles.link}
+      accessibilityRole="link"
+      {...webLink(url)}
+      onPress={IS_WEB ? undefined : () => Linking.openURL(url)}
+    >
       {children}
     </Text>
   );
@@ -98,6 +105,10 @@ export default function Info() {
         </Text>
       </View>
 
+      <H>Impressum</H>
+      <P>Angaben gemäß § 18 Abs. 1 MStV:</P>
+      <P>{'Eric Alexander Eren\nFriedenhorster Str. 11, App. 1600\n10319 Berlin'}</P>
+
       <H>Datenquellen</H>
       <P>
         Grundlage ist der offene Datensatz „Berliner Weihnachtsmärkte“ der Senatsverwaltung für Wirtschaft, Energie und
@@ -116,6 +127,7 @@ export default function Info() {
       )}
 
       <H>Datenschutz</H>
+      <P>Verantwortlich für die Datenverarbeitung ist Eric Alexander Eren, die Anschrift steht im Impressum.</P>
       {IS_WEB ? (
         <>
           <P>
@@ -159,6 +171,10 @@ export default function Info() {
       <P>
         Termine ändern sich manchmal kurzfristig. Maßgeblich sind immer die Angaben auf der Seite des jeweiligen
         Veranstalters.
+      </P>
+      <P>
+        Fehler und Hinweise kannst du als{' '}
+        <A url="https://github.com/ericeren/weihnachtsmaerkte-berlin/issues">Issue auf GitHub</A> melden.
       </P>
     </ScrollView>
   );
