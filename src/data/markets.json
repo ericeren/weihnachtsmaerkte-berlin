@@ -1,0 +1,4473 @@
+{
+ "stand": "2026-11-27",
+ "bilder": {
+  "11": {
+   "urheber": "Leonhard Lenz",
+   "lizenz": "CC0 1.0",
+   "lizenzUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.de"
+  },
+  "68": {
+   "urheber": "Heidi zu Klampen",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.de"
+  },
+  "95": {
+   "urheber": "Dguendel",
+   "lizenz": "CC BY 4.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by/4.0/deed.de"
+  },
+  "101": {
+   "urheber": "Aiken Hartenfels",
+   "lizenz": "CC BY-SA 3.0 DE",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.de"
+  },
+  "213": {
+   "urheber": "Pascal Volk",
+   "lizenz": "CC BY-SA 2.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.de"
+  },
+  "216": {
+   "urheber": "KlemensM",
+   "lizenz": "CC0 1.0",
+   "lizenzUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.de"
+  },
+  "217": {
+   "urheber": "Auto1234",
+   "lizenz": "CC BY-SA 3.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/3.0/deed.de"
+  },
+  "5": {
+   "urheber": "Colin Smith",
+   "lizenz": "CC BY-SA 2.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.de"
+  },
+  "242": {
+   "urheber": "Colin Smith",
+   "lizenz": "CC BY-SA 2.0",
+   "lizenzUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.de"
+  }
+ },
+ "maerkte": [
+  {
+   "id": "41",
+   "name": "A Very British Christmas",
+   "typ": "international",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Preußenallee 17-19, 14052 Berlin",
+   "lat": 52.512,
+   "lng": 13.258,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1050
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Englischsprachiger Weihnachtsmarkt der anglikanischen St George’s Church in Westend.",
+   "web": {
+    "url": "https://www.stgeorgesberlin.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Neu-Westend"
+  },
+  {
+   "id": "263",
+   "name": "Advent im Forstamt Tegel",
+   "typ": "natur",
+   "bezirk": "Reinickendorf",
+   "adresse": "Ruppiner Chaussee 78, 13503 Berlin",
+   "lat": 52.608,
+   "lng": 13.228,
+   "von": "2026-11-28",
+   "bis": "2026-11-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Gemütlich und rustikal mit Lagerfeuer: Wildfleisch und Würste, frisch geräucherter Fisch, Honig, Brennholz und Weihnachtsgrün.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5737880-3496862-advent-im-forstamt-tegel.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "204",
+   "name": "Adventsbasar der Albert-Schweitzer-Stiftung",
+   "typ": "kiez",
+   "bezirk": "Pankow",
+   "adresse": "Bahnhofstr. 32, 13129 Berlin",
+   "lat": 52.591,
+   "lng": 13.448,
+   "von": "2026-11-28",
+   "bis": "2026-11-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Adventsbasar der Albert-Schweitzer-Stiftung im Pfarrgarten in Blankenburg unter dem Motto „Miteinander statt nebeneinander“.",
+   "web": {
+    "url": "https://www.ass-berlin.org/adventsbasar-2026/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Blankenburg",
+   "barrierefrei": true
+  },
+  {
+   "id": "251",
+   "name": "Adventsbasar der Kaspar Hauser Stiftung",
+   "typ": "kiez",
+   "bezirk": "Pankow",
+   "adresse": "Rolandstraße 35, 13156 Berlin",
+   "lat": 52.61,
+   "lng": 13.414,
+   "von": "2026-11-28",
+   "bis": "2026-11-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Basar auf dem Gelände der Konrad-Duden-Schule mit Handgemachtem aus Werkstätten für Menschen mit Behinderung, etwa Keramik, Filz, Bienenwachskerzen und Adventsgestecken.",
+   "web": {
+    "url": "https://www.kh-stiftung.de/de/termine/herzliche-einladung-zum-adventsbasar",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "158",
+   "name": "Adventsmarkt Alt-Marzahn",
+   "typ": "kiez",
+   "bezirk": "Marzahn-Hellersdorf",
+   "adresse": "Alt-Marzahn 19, 12685 Berlin",
+   "lat": 52.555,
+   "lng": 13.557,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Adventsmarkt im alten Dorfkern Alt-Marzahn am ersten Adventssonntag.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5685805-3496862-adventsmarkt-altmarzahn.html",
+    "art": "info"
+   },
+   "oepnv": "S Mehrower Allee",
+   "hinweis": "Um 11 Uhr Gottesdienst in der Dorfkirche Marzahn"
+  },
+  {
+   "id": "128",
+   "name": "Adventsmarkt auf der Domäne Dahlem",
+   "typ": "natur",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Königin-Luise-Straße 49, 14195 Berlin",
+   "lat": 52.458,
+   "lng": 13.289,
+   "von": "2026-11-28",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1140
+    ],
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "4,50 €, ermäßigt 2 €, Kinder unter 12 frei. Tickets am besten vorab online kaufen"
+   },
+   "text": "An allen Adventswochenenden auf dem Bio-Landgut: Kunsthandwerk, Bio-Speisen, Bläsermusik und für Kinder Feuershow, Basteln und Kugeln bemalen.",
+   "web": {
+    "url": "https://www.domaene-dahlem.de/adventsmarkt/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Dahlem-Dorf",
+   "barrierefrei": true
+  },
+  {
+   "id": "50",
+   "name": "Adventsmarkt im Bergmannkiez",
+   "typ": "kiez",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Fidicinstr. 2, 10965 Berlin",
+   "lat": 52.487,
+   "lng": 13.387,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     810,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "unbekannt",
+    "text": "Keine Angabe zum Eintritt"
+   },
+   "text": "Adventsnachmittag im Pflegewohnheim Am Kreuzberg, gemeinsam mit dem Mühlenhaupt Museum gegenüber, mit Programm für Groß und Klein.",
+   "web": {
+    "url": "https://unionhilfswerk.de/PWHKB",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Platz der Luftbrücke",
+   "barrierefrei": true
+  },
+  {
+   "id": "62",
+   "name": "Adventsmarkt im Evangelischen Johannesstift",
+   "typ": "kiez",
+   "bezirk": "Spandau",
+   "adresse": "Schönwalder Allee 26, 13587 Berlin",
+   "lat": 52.568,
+   "lng": 13.193,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Stimmungsvoller Adventsmarkt mit Kerzenlicht und Musik auf dem Stiftsgelände in Spandau. Er beginnt im Anschluss an eine Adventsandacht.",
+   "web": {
+    "url": "https://www.evangelisches-johannesstift.de/de/veranstaltungen/adventsmarkt-2026",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "271",
+   "name": "Adventsmarkt im St.-Michaels-Heim",
+   "typ": "kiez",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Bismarckallee 23, 14193 Berlin",
+   "lat": 52.486,
+   "lng": 13.291,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1200
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Seit über 40 Jahren richtet das Johannische Sozialwerk diesen Markt am St.-Michaels-Heim aus, mit Leckereien nach alten Rezepten.",
+   "web": {
+    "url": "https://www.st-michaels-heim.de/kultur/veranstaltungen#c337",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "274",
+   "name": "Adventsmarkt in der Papierstraße",
+   "typ": "kunst",
+   "bezirk": "Reinickendorf",
+   "adresse": "Alt-Reinickendorf 29, 13407 Berlin",
+   "lat": 52.57,
+   "lng": 13.331,
+   "von": "2026-11-19",
+   "bis": "2026-12-03",
+   "woche": [
+    null,
+    null,
+    null,
+    [
+     780,
+     1080
+    ],
+    null,
+    null,
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "In offenen Werkstätten in Alt-Reinickendorf gibt es Handgemachtes aus Papier, Stoff und Wolle, von Kalendern und Notizbüchern bis zu Kissen und Taschen.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7892913-3496862-weihnachtsmarkt-in-der-papierstrasse.html",
+    "art": "info"
+   },
+   "oepnv": "S Alt-Reinickendorf, U Paracelsusbad"
+  },
+  {
+   "id": "252",
+   "name": "Adventsmarkt in Hanff’s Ruh",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Rabindranath-Tagore-Straße 25, 12527 Berlin",
+   "lat": 52.414,
+   "lng": 13.644,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1200
+    ],
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Traditioneller Adventsmarkt im Garten des Restaurants Hanff’s Ruh in Köpenick mit besinnlicher Musik und Ständen mit Holz-, Filz- und Wollarbeiten.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7828055-3496862-adventsmarkt-in-hanffs-ruh.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "152",
+   "name": "Adventsökomarkt am Kollwitzplatz",
+   "typ": "natur",
+   "bezirk": "Pankow",
+   "adresse": "Wörther Straße, 10405 Berlin",
+   "lat": 52.536,
+   "lng": 13.417,
+   "von": "2026-11-29",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Ökomarkt der Grünen Liga an den Adventssonntagen: faires und bewusstes Einkaufen, süße und herzhafte Snacks und Infostände gemeinnütziger Vereine.",
+   "web": {
+    "url": "https://www.grueneliga-berlin.de/themen-projekte2/oekomarkt/adventsoekomarkt-2/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "234",
+   "name": "Alpinia Wintermarkt",
+   "typ": "kiez",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Säntisstraße 32-34, 12107 Berlin",
+   "lat": 52.43,
+   "lng": 13.384,
+   "von": "2026-11-29",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Kleiner Adventsmarkt am Hotel Landhaus Alpinia in Mariendorf mit Lagerfeuer, Glühwein, Crêpes und Lebkuchen an den Adventssonntagen.",
+   "web": {
+    "url": "https://wirtshaus-alpinia.de/events/advents-sonntage/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "200",
+   "name": "Alt-Kaulsdorfer Weihnachtsmarkt",
+   "typ": "kiez",
+   "bezirk": "Marzahn-Hellersdorf",
+   "adresse": "Dorfstraße 12, 12621 Berlin",
+   "lat": 52.5082,
+   "lng": 13.5801,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1200
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weihnachtsmarkt im Dorfkern Alt-Kaulsdorf am Samstag vor dem zweiten Advent.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5685370-3496862-christmas-market-alt-kaulsdorf.html",
+    "art": "info"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "215",
+   "name": "Alt-Rixdorfer Weihnachtsmarkt",
+   "typ": "kiez",
+   "bezirk": "Neukölln",
+   "adresse": "Richardplatz, 12055 Berlin",
+   "lat": 52.474,
+   "lng": 13.444,
+   "von": "2026-12-04",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     1020,
+     1260
+    ],
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Über 200 gemeinnützige Gruppen und Vereine verkaufen am zweiten Adventswochenende Selbstgemachtes rund um den Richardplatz im historischen Rixdorf, von Holzspielzeug bis Honig.",
+   "web": {
+    "url": "https://www.rixdorf.info/rixdorf/rixdorfer-weihnachtsmarkt/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "267",
+   "name": "Altglienicker Adventsmarkt",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Rosestraße 42, 12524 Berlin",
+   "lat": 52.407,
+   "lng": 13.531,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     null
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rund 20 Stände von Vereinen, Kitas und Selbstständigen aus dem Kiez nahe dem S-Bahnhof Altglienicke, mit Essen, Gestecken und kleinem Kunsthandwerk.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5685464-3496862-altglienicker-adventsmarkt.html",
+    "art": "info"
+   },
+   "oepnv": "S Altglienicke",
+   "hinweis": "Ende der Öffnungszeit nicht angegeben"
+  },
+  {
+   "id": "227",
+   "name": "Berliner Hundeweihnachtsmarkt",
+   "typ": "szene",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Hüttenweg 90, 14193 Berlin",
+   "lat": 52.465,
+   "lng": 13.248,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     600,
+     1080
+    ],
+    [
+     600,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "2,50 €, davon geht 1 € an einen Tierschutzverein"
+   },
+   "text": "Weihnachtsmarkt für Hunde und ihre Menschen im Hundeauslaufgebiet Grunewald: Geschenke und Deko rund ums Tier, dazu Glühwein und Snacks.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7794849-3496862-berliner-hundeweihnachtsmarkt.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "11",
+   "name": "Berliner Weihnachtszeit am Roten Rathaus",
+   "typ": "klassiker",
+   "bezirk": "Mitte",
+   "adresse": "Rathausstraße 15, 10178 Berlin",
+   "lat": 52.5193,
+   "lng": 13.4071,
+   "von": "2026-11-23",
+   "bis": "2027-01-03",
+   "woche": [
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24",
+    "2026-12-31"
+   ],
+   "sonder": {
+    "2027-01-03": [
+     720,
+     1200
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei. Eisbahn 5 € pro Laufzeit"
+   },
+   "text": "Eisbahn rund um den Neptunbrunnen, ein 50 Meter hohes Riesenrad mit beheizten Gondeln und eine Marktgasse im Altberliner Stil. Für Kinder gibt es einen Märchenwald mit Eisenbahn.",
+   "web": {
+    "url": "https://www.berliner-weihnachtszeit.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Rotes Rathaus, S+U Alexanderplatz",
+   "barrierefrei": true,
+   "bild": "11"
+  },
+  {
+   "id": "245",
+   "name": "Bucher Weihnachtszauber",
+   "typ": "historisch",
+   "bezirk": "Pankow",
+   "adresse": "Alt-Buch 45-51, 13125 Berlin",
+   "lat": 52.633,
+   "lng": 13.494,
+   "von": "2026-12-11",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     null
+    ],
+    [
+     840,
+     null
+    ],
+    [
+     840,
+     null
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Mittelalterlich angehauchter Markt in historischer Kulisse in Buch, mit Lagerfeuer, Gauklern, Kunsthandwerk und Kerzenziehen für Kinder.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5742526-3496862-bucher-weihnachtszauber.html",
+    "art": "info"
+   },
+   "hinweis": "Ende der Öffnungszeit nicht angegeben"
+  },
+  {
+   "id": "205",
+   "name": "Christmas Avenue",
+   "typ": "szene",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Nollendorfplatz (unter der Hochbahn), 10777 Berlin",
+   "lat": 52.5,
+   "lng": 13.353,
+   "von": "2026-11-23",
+   "bis": "2026-12-23",
+   "woche": [
+    [
+     960,
+     1320
+    ],
+    [
+     960,
+     1320
+    ],
+    [
+     960,
+     1320
+    ],
+    [
+     960,
+     1320
+    ],
+    [
+     900,
+     1350
+    ],
+    [
+     900,
+     1350
+    ],
+    [
+     900,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Queerer Weihnachtsmarkt unter der Hochbahn am Nollendorfplatz mit Hütten für Mode, Kunst und Handgemachtes. Ab 19 Uhr gibt es Bühnenprogramm mit Drag-Bingo, Karaoke und DJs.",
+   "web": {
+    "url": "https://www.christmas-avenue.berlin/lgbtqia-weihnachtsmarkt-berlin/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Nollendorfplatz"
+  },
+  {
+   "id": "268",
+   "name": "Dänischer Weihnachtsmarkt",
+   "typ": "international",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Brienner Straße 12, 10713 Berlin",
+   "lat": 52.487,
+   "lng": 13.312,
+   "von": "2026-11-27",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     960
+    ],
+    [
+     720,
+     1080
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Julemarked der Dänischen Kirche in Wilmersdorf mit Glögg, Lakritz, Æbleskiver, Smørrebrød und dänischem Weihnachtsbier.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5701678-3496862-daenischer-weihnachtsmarkt.html",
+    "art": "info"
+   },
+   "oepnv": "U Fehrbelliner Platz"
+  },
+  {
+   "id": "250",
+   "name": "Feuriger Advent auf der Marzahner Promenade",
+   "typ": "kiez",
+   "bezirk": "Marzahn-Hellersdorf",
+   "adresse": "Marzahner Promenade 55, 12679 Berlin",
+   "lat": 52.546,
+   "lng": 13.565,
+   "von": "2026-12-04",
+   "bis": "2026-12-04",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1080
+    ],
+    null,
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kiezweihnachtsmarkt mit Feuerschalen, A-cappella-Chor, Feuershow, Plätzchen und Kinderpunsch auf der Marzahner Promenade.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5748698-3496862-weihnachtsmarkt-auf-der-marzahner-promen.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "257",
+   "name": "Gatower Kunst- und Handwerkermarkt",
+   "typ": "kunst",
+   "bezirk": "Spandau",
+   "adresse": "Alt-Gatow 32-38, 14089 Berlin",
+   "lat": 52.47,
+   "lng": 13.171,
+   "von": "2026-12-13",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rund 40 Kunsthandwerkerinnen und Kunsthandwerker verkaufen in Alt-Gatow Handgemachtes, dazu stellen sich Vereine und Initiativen aus dem Ort vor.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5711172-3496862-gatower-kunst-und-handwerkerweihnachtsma.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "256",
+   "name": "Glühwald am Uber Platz",
+   "typ": "klassiker",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Uber Platz, 10243 Berlin",
+   "lat": 52.506,
+   "lng": 13.45,
+   "von": "2026-11-06",
+   "bis": "2026-12-29",
+   "woche": [
+    null,
+    null,
+    [
+     960,
+     null
+    ],
+    [
+     960,
+     null
+    ],
+    [
+     960,
+     null
+    ],
+    [
+     960,
+     null
+    ],
+    [
+     960,
+     null
+    ]
+   ],
+   "zu": [
+    "2026-12-24",
+    "2026-12-31",
+    "2027-01-01"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Der Uber Platz wird zum Weihnachtswald mit Tannenduft, Holzhütten, Kartoffelpuffern, Waffeln und Bratwurst.",
+   "web": {
+    "url": "https://gluehwald.com/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Warschauer Str.",
+   "hinweis": "Ende der Öffnungszeit nicht angegeben"
+  },
+  {
+   "id": "53",
+   "name": "Glühweingarten im ://about blank",
+   "typ": "szene",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Markgrafendamm 24c, 10245 Berlin",
+   "lat": 52.502,
+   "lng": 13.466,
+   "von": "2026-11-29",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Glühwein, Feuertonne, veganes Essen und Musik im Zelt im Garten des Clubs ://about blank am Ostkreuz, immer sonntags im Advent.",
+   "web": {
+    "url": "https://aboutblank.li/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Ostkreuz",
+   "barrierefrei": true
+  },
+  {
+   "id": "259",
+   "name": "Grunewalder Weihnachtsmarkt",
+   "typ": "kiez",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Bismarckallee 28b, 14193 Berlin",
+   "lat": 52.485,
+   "lng": 13.289,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     750,
+     1110
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Seit 1976 rund um die Grunewaldkirche: etwa 50 Stände gemeinnütziger Organisationen mit Süßem, Herzhaftem und Geschenkideen in familiärer Atmosphäre.",
+   "web": {
+    "url": "https://www.grunewaldgemeinde.de/gemeindeleben/alle-miteinander-weihnachtsmarkt",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "32",
+   "name": "Heissa Holzmarkt Winterfestival",
+   "typ": "szene",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Holzmarktstraße 25, 10243 Berlin",
+   "lat": 52.511,
+   "lng": 13.427,
+   "von": "2026-11-06",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    [
+     960,
+     1320
+    ],
+    [
+     960,
+     1320
+    ],
+    [
+     960,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "Mi und Do 2 €, Fr bis So 3 € Kulturbeitrag. Frei für Kinder bis 12 Jahre, Senior*innen und in der ersten Stunde nach Öffnung für alle"
+   },
+   "text": "Wintermarkt auf dem Holzmarkt-Gelände an der Spree mit ungewöhnlichen Waren und vielfältigem Programm im ganzen Quartier.",
+   "web": {
+    "url": "https://www.holzmarkt.com/veranstaltung/heissa-holzmarkt-winterfestival-2026",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "23",
+   "name": "Historische Weihnacht auf dem RAW-Gelände",
+   "typ": "historisch",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Revaler Straße 99, 10245 Berlin",
+   "lat": 52.508,
+   "lng": 13.451,
+   "von": "2026-11-12",
+   "bis": "2026-12-22",
+   "woche": [
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1380
+    ],
+    [
+     720,
+     1380
+    ],
+    [
+     720,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-11-22"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "Di bis Fr 3 €, Sa und So 4 €, ermäßigt jeweils die Hälfte. Montags frei, Kinder bis 5 Jahre frei"
+   },
+   "text": "Mittelalterlich anmutender Markt mit Schmieden, Holzschnitzern und Töpfern, Gauklern und Akrobaten bei Fackelschein. Für Kinder gibt es Riesenrad, Holzkarussell und Bogenschießen.",
+   "web": {
+    "url": "https://www.carnica-spectaculi.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Warschauer Str."
+  },
+  {
+   "id": "313",
+   "name": "Holy Shit Shopping",
+   "typ": "kunst",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Eichenstraße 4A (Haus der Visionäre), 12435 Berlin",
+   "lat": 52.4948,
+   "lng": 13.4453,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ],
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "8 €, Kinder bis 14 Jahre frei"
+   },
+   "text": "Designmarkt im Haus der Visionäre mit ausgewählten Produkten von über 300 Kreativen aus Deutschland und Europa, dazu DJ-Sets, Glühwein und Streetfood.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/2208886-3496862-holy-shit-shopping.html",
+    "art": "info"
+   },
+   "oepnv": "Bus Eichenstr./Puschkinallee"
+  },
+  {
+   "id": "246",
+   "name": "Japanmarkt Christmas Edition",
+   "typ": "international",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Am Flutgraben 2 (Festsaal Kreuzberg), 12435 Berlin",
+   "lat": 52.498,
+   "lng": 13.446,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "22 €, Frühbucher 16 €, Kinder unter 10 frei"
+   },
+   "text": "Weihnachtsausgabe des Japanmarkts im Festsaal Kreuzberg mit Workshops, Kulinarik und Handgemachtem, dazu Kampfkunst, Konzerte und Tanz.",
+   "web": {
+    "url": "https://festsaal-kreuzberg.de/de/programm/Japanmarkt-Dezember-26",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "218",
+   "name": "Keramik Wintermarkt",
+   "typ": "kunst",
+   "bezirk": "Mitte",
+   "adresse": "Wollankstraße 72, 13359 Berlin",
+   "lat": 52.561,
+   "lng": 13.392,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Wintermarkt rund um Keramik beim Clayers Collective in der Wollankstraße.",
+   "web": {
+    "url": "https://clayerscollective.squarespace.com/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "243",
+   "name": "Kinky Weihnachtsmarkt",
+   "typ": "szene",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Köpenicker Straße 18-20 (Sage Beach), 10997 Berlin",
+   "lat": 52.507,
+   "lng": 13.436,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1260
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "6 bis 10 €, Zutritt ab 18 Jahren"
+   },
+   "text": "Über 30 Stände mit Mode, Accessoires, Schmuck und Spielzeug für Erwachsene, dazu Workshops. Zutritt ab 18 Jahren.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/8593915-3496862-kinky-weihnachtsmarkt.html",
+    "art": "info"
+   },
+   "hinweis": "Zutritt ab 18 Jahren"
+  },
+  {
+   "id": "161",
+   "name": "Kulinarischer Weihnachtsmarkt beim Weinlobbyisten",
+   "typ": "kiez",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Kolonnenstr. 62, 10827 Berlin",
+   "lat": 52.486,
+   "lng": 13.359,
+   "von": "2026-11-23",
+   "bis": "2026-12-28",
+   "woche": [
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kulinarischer Weihnachtsmarkt in Schöneberg, ausgerichtet vom Weinlobbyisten in der Kolonnenstraße.",
+   "web": {
+    "url": "https://www.derweinlobbyist.de/weihnachtsmarkt-berlin",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Julius-Leber-Brücke",
+   "barrierefrei": true
+  },
+  {
+   "id": "131",
+   "name": "Kunsthandwerklicher Advent am Karl-August-Platz",
+   "typ": "kunst",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Karl-August-Platz, 10625 Berlin",
+   "lat": 52.508,
+   "lng": 13.31,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kunsthandwerkermarkt am ersten Adventssonntag auf dem Karl-August-Platz in Charlottenburg.",
+   "web": {
+    "url": "https://www.family-and-friends-ev.de/blog",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Wilmersdorfer Str.",
+   "barrierefrei": true
+  },
+  {
+   "id": "134",
+   "name": "Kunsthandwerklicher Advent in der Leonhardtstraße",
+   "typ": "kunst",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Leonhardtstrasse, 14057 Berlin",
+   "lat": 52.505,
+   "lng": 13.297,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kunsthandwerk auf dem Bürgersteig der Leonhardtstraße in Charlottenburg am zweiten Adventssonntag.",
+   "web": {
+    "url": "https://www.family-and-friends-ev.de/blog",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Charlottenburg",
+   "barrierefrei": true
+  },
+  {
+   "id": "5",
+   "name": "Kunsthandwerklicher Weihnachtsmarkt am Mexikoplatz",
+   "typ": "kunst",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Mexikoplatz, 14163 Berlin",
+   "lat": 52.439,
+   "lng": 13.233,
+   "von": "2026-11-29",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "An allen vier Adventssonntagen bieten über 90 Kunsthandwerkerinnen und Kunsthandwerker am Mexikoplatz in Zehlendorf handgefertigte Arbeiten an.",
+   "web": {
+    "url": "https://www.kunsthand-berlin.de/veranstaltungen/kunsthandwerklicher-weihnachtsmarkt-mexikoplatz.html",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Mexikoplatz",
+   "bild": "5"
+  },
+  {
+   "id": "2",
+   "name": "Kunsthandwerklicher Weihnachtsmarkt Frohnau",
+   "typ": "kunst",
+   "bezirk": "Reinickendorf",
+   "adresse": "Zeltinger Platz, 13465 Berlin",
+   "lat": 52.635,
+   "lng": 13.29,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ],
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rund 120 Kunsthandwerkerinnen und Kunsthandwerker zeigen im Zentrum von Frohnau ihre Unikate, von Schmuck und Keramik bis zu Weihnachtsdeko.",
+   "web": {
+    "url": "https://www.kunsthand-berlin.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Frohnau"
+  },
+  {
+   "id": "230",
+   "name": "Lichtenberger Winterzeit",
+   "typ": "rummel",
+   "bezirk": "Lichtenberg",
+   "adresse": "Landsberger Allee 300, 10365 Berlin",
+   "lat": 52.536,
+   "lng": 13.486,
+   "von": "2026-10-31",
+   "bis": "2026-12-27",
+   "woche": [
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1380
+    ],
+    [
+     840,
+     1380
+    ],
+    [
+     840,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-11-22",
+    "2026-12-24"
+   ],
+   "sonder": {
+    "2026-12-25": [
+     840,
+     1320
+    ],
+    "2026-12-26": [
+     840,
+     1320
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Großer Weihnachtsrummel an der Landsberger Allee mit Riesenrad, Action- und Kinderfahrgeschäften, Glühwein und Imbissständen. Mittwochs ist Familientag mit günstigeren Fahrpreisen für Kinder.",
+   "web": {
+    "url": "https://lichtenberger-winterzeit.de/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "8",
+   "name": "Lichtenrader Lichtermarkt",
+   "typ": "kiez",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Alt-Lichtenrade, 12305 Berlin",
+   "lat": 52.398,
+   "lng": 13.405,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Der traditionsreiche Lichtermarkt in Alt-Lichtenrade findet zum 48. Mal statt, wie immer am ersten Adventssonntag.",
+   "web": {
+    "url": "https://www.berlin.de/ba-ts/lichtenrader-lichtermarkt",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "155",
+   "name": "Lichterglanz im Tannenwald (Späth’sche Baumschulen)",
+   "typ": "rummel",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Späthstraße 80/81, 12437 Berlin",
+   "lat": 52.453,
+   "lng": 13.471,
+   "von": "2026-11-28",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "ticket",
+    "text": "Ticket nötig, online günstiger als vor Ort"
+   },
+   "text": "Weihnachtswelt auf dem historischen Gelände der Baumschule mit beleuchtetem Tannenwald, Live-Bands und Chören, rund 100 Ständen, Glitzergarten und Kremserfahrten.",
+   "web": {
+    "url": "https://www.spaethsche-baumschulen.de/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "269",
+   "name": "Lichtermarkt am Rathaus Lichtenberg",
+   "typ": "kiez",
+   "bezirk": "Lichtenberg",
+   "adresse": "Möllendorffstraße 6, 10367 Berlin",
+   "lat": 52.515,
+   "lng": 13.495,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Seit über 30 Jahren zum ersten Advent: Vereine, Schulen und Einrichtungen verkaufen am Rathaus Lichtenberg Handgemachtes, Spielzeug und Gebäck.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5692582-3496862-lichtermarkt-am-rathaus-lichtenberg.html",
+    "art": "info"
+   },
+   "oepnv": "S+U Frankfurter Allee"
+  },
+  {
+   "id": "228",
+   "name": "Lichtermarkt an der Christuskirche Oberschöneweide",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Firlstraße 16, 12459 Berlin",
+   "lat": 52.463,
+   "lng": 13.519,
+   "von": "2026-11-28",
+   "bis": "2026-11-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1110
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Traditionell am Samstag vor dem ersten Advent: Vereine und Gruppen aus dem Kiez verkaufen an der Christuskirche Kunsthandwerk, Spielzeug und Selbstgemachtes.",
+   "web": {
+    "url": "https://www.ev-kirche-oberschoeneweide.de/#Veranstaltungen",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "217",
+   "name": "Lucia Weihnachtsmarkt in der Kulturbrauerei",
+   "typ": "klassiker",
+   "bezirk": "Pankow",
+   "adresse": "Schönhauser Allee 36, 10435 Berlin",
+   "lat": 52.539,
+   "lng": 13.413,
+   "von": "2026-11-23",
+   "bis": "2026-12-22",
+   "woche": [
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     900,
+     1320
+    ],
+    [
+     780,
+     1320
+    ],
+    [
+     780,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Skandinavisch geprägter Markt im Hof der Kulturbrauerei mit nostalgischem Karussell, Feuerschalen und dem Thron des Weihnachtsmanns samt Wunschzettel-Briefkasten.",
+   "web": {
+    "url": "https://www.lucia-weihnachtsmarkt.de/",
+    "art": "veranstalter"
+   },
+   "bild": "217"
+  },
+  {
+   "id": "229",
+   "name": "Merry Markthalle",
+   "typ": "kunst",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Eisenbahnstraße 42, 10997 Berlin",
+   "lat": 52.499,
+   "lng": 13.434,
+   "von": "2026-12-06",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Die Markthalle Neun wird an den Adventssonntagen zum wettergeschützten Weihnachtsmarkt mit Schmuck, Kinderkleidung, Büchern, Mode und lokal gemachten Leckereien.",
+   "web": {
+    "url": "https://markthalleneun.de/maerkte/merry-markthalle",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "273",
+   "name": "Märchenhafter Weihnachtsmarkt am Jagdschloss Grunewald",
+   "typ": "historisch",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Hüttenweg 100, 14193 Berlin",
+   "lat": 52.4706,
+   "lng": 13.2627,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1140
+    ],
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "3,50 €, ermäßigt 2 €, mit Schlossbesichtigung. Kinder bis 6 Jahre frei"
+   },
+   "text": "Im Hof des ältesten erhaltenen Schlosses Berlins am Grunewaldsee laufen Märchenfiguren zwischen den Ständen umher, mit Kunsthandwerk und Leckereien.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5506437-3496862-weihnachtsmarkt-am-jagdschloss-grunewald.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "258",
+   "name": "Nachhaltiger Weihnachtsmarkt am Schloss Schönhausen",
+   "typ": "natur",
+   "bezirk": "Pankow",
+   "adresse": "Tschaikowskistraße 1, 13156 Berlin",
+   "lat": 52.581,
+   "lng": 13.412,
+   "von": "2026-11-27",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1260
+    ],
+    [
+     720,
+     1260
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "2 €, unter 18 Jahren frei"
+   },
+   "text": "Müllvermeidender Weihnachtsmarkt mit nachhaltig hergestellten Manufakturwaren vor der Kulisse von Schloss Schönhausen in Pankow.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7092130-3496862-nachhaltiger-weihnachtsmarkt-am-schloss-.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "226",
+   "name": "Nordberliner Weihnachtsrummel",
+   "typ": "rummel",
+   "bezirk": "Reinickendorf",
+   "adresse": "Am Borsigturm 130, 13507 Berlin",
+   "lat": 52.584,
+   "lng": 13.284,
+   "von": "2026-11-23",
+   "bis": "2026-12-27",
+   "woche": [
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Neuer Weihnachtsrummel auf der Festwiese am Borsigturm mit nostalgischen Karussells, schnellen Fahrgeschäften, Imbissständen und Lichtern.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/nordberliner-weihnachtsrummel/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Borsigwerke"
+  },
+  {
+   "id": "239",
+   "name": "Nordische Märchenweihnacht am Gutshof Britz",
+   "typ": "historisch",
+   "bezirk": "Neukölln",
+   "adresse": "Alt-Britz 73, 12359 Berlin",
+   "lat": 52.443,
+   "lng": 13.445,
+   "von": "2026-11-27",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "Kostenpflichtig, Preis für 2026 noch nicht veröffentlicht (2024: 5 €, ermäßigt 2 €, Kinder unter 6 frei)"
+   },
+   "text": "Nordisch-historischer Markt mit Märchenprogramm, Schattentheater und Feuershow. Kinder können Bogenschießen ausprobieren und auf Wikingerboote klettern, dazu gibt es Glögg.",
+   "web": {
+    "url": "https://schloss-gutshof-britz.de/schloss-britz/veranstaltungen/kalender/nordische-maerchenweihnacht",
+    "art": "veranstalter"
+   },
+   "hinweis": "Märkte an allen vier Adventswochenenden"
+  },
+  {
+   "id": "317",
+   "name": "Norwegischer Julebasar",
+   "typ": "international",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Wartenburgstraße 7, 10963 Berlin",
+   "lat": 52.4958,
+   "lng": 13.3838,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     null
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (laut berlin.de)"
+   },
+   "text": "Adventsbasar der Norwegischen Kirche in Kreuzberg mit Gløgg, Fischsuppe und Pfannkuchen, dazu Fairtrade- und Secondhand-Waren und Marshmallows am Feuer.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7792272-3496862-norwegischer-julebasar.html",
+    "art": "info"
+   },
+   "oepnv": "U Möckernbrücke",
+   "hinweis": "Ende der Öffnungszeit nicht angegeben"
+  },
+  {
+   "id": "318",
+   "name": "Nowkoelln Xmas Flowmarkt",
+   "typ": "kunst",
+   "bezirk": "Neukölln",
+   "adresse": "Maybachufer 31, 12047 Berlin",
+   "lat": 52.4891,
+   "lng": 13.4288,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     600,
+     1020
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Über 50 Stände am Landwehrkanal mit überwiegend selbstgemachtem Design und Kunst aus dem Kiez, dazu Glühwein und Waffeln.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/4611178-3496862-nowkoelln-xmas-flowmarkt.html",
+    "art": "info"
+   },
+   "oepnv": "Ohlauer Str."
+  },
+  {
+   "id": "237",
+   "name": "Oberschöner Weihnachtsmarkt",
+   "typ": "kunst",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Hasselwerderstraße 22A, 12439 Berlin",
+   "lat": 52.457,
+   "lng": 13.546,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1200
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (Angabe von 2025)"
+   },
+   "text": "Weihnachtsmarkt am zweiten Adventswochenende im Hasselwerder Park in Schöneweide, mit Kunsthandwerk und Live-Musik.",
+   "web": {
+    "url": "https://schoenevibes.de/oberschoener-weihnachtsmarkt/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "77",
+   "name": "Oh du Schöneweide",
+   "typ": "rummel",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Wilhelminenhofstraße 89, 12459 Berlin",
+   "lat": 52.461,
+   "lng": 13.511,
+   "von": "2026-11-26",
+   "bis": "2026-12-19",
+   "woche": [
+    null,
+    null,
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "ticket",
+    "text": "Nur mit Ticket. Speisen und Getränke sind im Preis enthalten"
+   },
+   "text": "Weihnachtliches Event in Oberschöneweide mit Markt und Weihnachtsdinner. Speisen und Getränke sind im Ticketpreis enthalten.",
+   "web": {
+    "url": "https://www.oh-du-schoeneweide.de",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "116",
+   "name": "Pankower Adventsmarkt in den Heynhöfen",
+   "typ": "kunst",
+   "bezirk": "Pankow",
+   "adresse": "Heynstraße 15, 13187 Berlin",
+   "lat": 52.563,
+   "lng": 13.402,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Am zweiten Advent bieten wechselnde Stände in den Heynhöfen Geschenke, Kunst, Schmuck und Deko, dazu Essen und Trinken.",
+   "web": {
+    "url": "http://www.heynhoefe.de/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "20",
+   "name": "Romantischer Weihnachtsmarkt der Lebenshilfe",
+   "typ": "kiez",
+   "bezirk": "Mitte",
+   "adresse": "Dohnagestell 10, 13351 Berlin",
+   "lat": 52.544,
+   "lng": 13.334,
+   "von": "2026-12-12",
+   "bis": "2026-12-12",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Ein Adventssamstag im Haus der Lebenshilfe im Wedding und im Garten: Stände mit Selbstgemachtem und Kunsthandwerk, dazu Waffeln, Crêpes, Plätzchen und Kinderpunsch.",
+   "web": {
+    "url": "https://www.lebenshilfe-berlin.de",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "98",
+   "name": "Rudower Weihnachtsmeile",
+   "typ": "kiez",
+   "bezirk": "Neukölln",
+   "adresse": "Alt-Rudow, Ecke Krokusstraße, 12357 Berlin",
+   "lat": 52.42,
+   "lng": 13.492,
+   "von": "2026-12-05",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Ein Adventswochenende rund um die Straße Alt-Rudow mit Glühwein, gebrannten Mandeln und Programm der AG Rudow.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/events/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "253",
+   "name": "Schauriger Weihnachtsmarkt im Goerzwerk",
+   "typ": "kiez",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Goerzallee 299, 12207 Berlin",
+   "lat": 52.423,
+   "lng": 13.31,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1050
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Ein Krampus streift über den Markt, das Programm bleibt aber gemütlich: Geschenkideen, Live-Musik und Reiten durch das Birkenwäldchen, dazu kommt der Nikolaus.",
+   "web": {
+    "url": "https://www.goerzwerk.de/nikolaus-krampus-am-05-12-26/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "71",
+   "name": "Schwedischer Weihnachtsbasar",
+   "typ": "international",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Landhausstr. 26-28, 10717 Berlin",
+   "lat": 52.487,
+   "lng": 13.328,
+   "von": "2026-11-27",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     960,
+     1200
+    ],
+    [
+     720,
+     1140
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "2 € pro Person, Kinder bis 12 Jahre frei"
+   },
+   "text": "Weihnachtsbasar der Schwedischen Kirche in Berlin, fast komplett im Freien. Am Samstag und Sonntag singt Lucia mit ihrem Chor.",
+   "web": {
+    "url": "https://www.svenskakyrkan.se/berlin",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Berliner Str.",
+   "barrierefrei": true
+  },
+  {
+   "id": "238",
+   "name": "Solidarischer Wintermarkt im Görlitzer Park",
+   "typ": "szene",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Skalitzer Straße 47, 10997 Berlin",
+   "lat": 52.497,
+   "lng": 13.438,
+   "von": "2026-12-12",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1200
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rund 25 Stände mit regionalen Waren, Waffeln, Glühwein und Kleidertausch. Die Einnahmen gehen an soziale Projekte im Kiez.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/8572515-3496862-solidarischer-wintermarkt-im-goerlitzer-.html",
+    "art": "info"
+   },
+   "oepnv": "U Görlitzer Bahnhof"
+  },
+  {
+   "id": "244",
+   "name": "Sozial-Weihnachtsmarkt im Stadtschloss Moabit",
+   "typ": "kiez",
+   "bezirk": "Mitte",
+   "adresse": "Rostocker Straße 32, 10553 Berlin",
+   "lat": 52.53,
+   "lng": 13.339,
+   "von": "2026-11-30",
+   "bis": "2026-11-30",
+   "woche": [
+    [
+     600,
+     840
+    ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Beim Sozial-Weihnachtsmarkt von Goldnetz können Menschen mit wenig Geld liebevoll gemachte, nachhaltig hergestellte oder upgecycelte Geschenke kaufen.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/10041553-3496862-sozialweihnachtsmarkt-im-stadtschloss-mo.html",
+    "art": "info"
+   },
+   "oepnv": "S Beusselstr."
+  },
+  {
+   "id": "242",
+   "name": "Spandauer Weihnachtsmarkt in der Altstadt",
+   "typ": "klassiker",
+   "bezirk": "Spandau",
+   "adresse": "Marktstraße 10, 13597 Berlin",
+   "lat": 52.537,
+   "lng": 13.204,
+   "von": "2026-11-23",
+   "bis": "2026-12-22",
+   "woche": [
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Großer Kunsthandwerkermarkt vom Marktplatz bis zwischen Rathaus und Nikolaikirche, mit internationalem Angebot von Alpakawolle aus Peru bis Weihnachtsschmuck aus Polen.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/3249571-3496862-spandauer-weihnachtsmarkt-in-der-altstad.html",
+    "art": "info"
+   },
+   "oepnv": "U Altstadt Spandau",
+   "bild": "242"
+  },
+  {
+   "id": "248",
+   "name": "Spandauer Winterland",
+   "typ": "rummel",
+   "bezirk": "Spandau",
+   "adresse": "Klosterstraße 38, 13581 Berlin",
+   "lat": 52.536,
+   "lng": 13.212,
+   "von": "2026-11-13",
+   "bis": "2026-12-27",
+   "woche": [
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     720,
+     1260
+    ]
+   ],
+   "zu": [
+    "2026-11-15",
+    "2026-11-22",
+    "2026-12-24"
+   ],
+   "sonder": {
+    "2026-12-27": [
+     720,
+     1200
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Winterrummel auf dem ehemaligen Postgelände gegenüber den Spandau Arcaden mit über 40 Fahrgeschäften vom Riesenrad bis zur Geisterbahn und Glühweingärten.",
+   "web": {
+    "url": "https://spandauer-winterland.de/winterland/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Spandau, S+U Rathaus Spandau"
+  },
+  {
+   "id": "44",
+   "name": "Umwelt- und Weihnachtsmarkt in der Sophienstraße",
+   "typ": "natur",
+   "bezirk": "Mitte",
+   "adresse": "Sophienstraße, 10178 Berlin",
+   "lat": 52.525,
+   "lng": 13.4,
+   "von": "2026-11-28",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1200
+    ],
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Design- und Künstlerware in einer der ältesten Straßen Berlins, direkt neben den Hackeschen Höfen. Das Umweltkonzept des Marktes wurde schon 1996 ausgezeichnet.",
+   "web": {
+    "url": "https://www.weihnachtsmarkt-sophienstrasse.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Hackescher Markt, U Weinmeisterstr.",
+   "barrierefrei": true
+  },
+  {
+   "id": "261",
+   "name": "Waldweihnachtsmarkt am Forstamt Grunewald",
+   "typ": "natur",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Königsallee 80, 14193 Berlin",
+   "lat": 52.482,
+   "lng": 13.272,
+   "von": "2026-12-13",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rustikaler Markt auf dem Wirtschaftshof des Forstamts mit Wildschwein und Reh aus Berliner Wäldern, Gulasch und Würsten.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7912461-3496862-weihnachtsmarkt-und-wildfleischverkauf-i.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "74",
+   "name": "Weddingmarkt Weihnachtsausgabe",
+   "typ": "kunst",
+   "bezirk": "Mitte",
+   "adresse": "Leopoldplatz, 13353 Berlin",
+   "lat": 52.548,
+   "lng": 13.361,
+   "von": "2026-11-29",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {
+    "2026-12-19": [
+     660,
+     1140
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Der Wochenmarkt auf dem Leopoldplatz wird an den Adventssonntagen und am Samstag vor Weihnachten zum Weihnachtsmarkt mit Kunst, Design und Streetfood, dazu Lagerfeuer und Stockbrot für Kinder.",
+   "web": {
+    "url": "https://wedding-markt.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Leopoldplatz",
+   "barrierefrei": true
+  },
+  {
+   "id": "110",
+   "name": "Weihnacht to go im Kranoldkiez",
+   "typ": "kiez",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Rund um den Kranoldplatz, 12209 Berlin",
+   "lat": 52.428,
+   "lng": 13.327,
+   "von": "2026-12-12",
+   "bis": "2026-12-12",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1140
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Die Straßen rund um den Kranoldplatz in Lichterfelde-Ost werden für einen Nachmittag zum Weihnachtsmarkt, organisiert von der Standortgemeinschaft Mein LiLa.",
+   "web": {
+    "url": "https://www.meinlila.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "S Lichterfelde Ost",
+   "barrierefrei": true
+  },
+  {
+   "id": "201",
+   "name": "Weihnachten an der Spree",
+   "typ": "rummel",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Stralauer Allee 2 (Spreespeicher), 10245 Berlin",
+   "lat": 52.5007,
+   "lng": 13.4489,
+   "von": "2026-11-16",
+   "bis": "2026-12-30",
+   "woche": [
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ],
+    [
+     1020,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24",
+    "2026-12-25",
+    "2026-12-26"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "ticket",
+    "text": "Ticket ab 29,99 € plus Gebühren, nur im Vorverkauf. Speisen und Getränke inklusive"
+   },
+   "text": "All-inclusive-Weihnachtsmarkt am Spreespeicher mit Blick auf die Oberbaumbrücke: Speisen und Getränke sind im Ticket enthalten, dazu Eisstockschießen.",
+   "web": {
+    "url": "https://www.weihnachten-an-der-spree.de/angebot/weihnachtsmarkt/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Warschauer Straße",
+   "hinweis": "Nur mit Ticket aus dem Vorverkauf"
+  },
+  {
+   "id": "137",
+   "name": "Weihnachten in Westend",
+   "typ": "kiez",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Preußenallee, 14052 Berlin",
+   "lat": 52.512,
+   "lng": 13.259,
+   "von": "2026-12-19",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1260
+    ],
+    [
+     720,
+     1260
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kleiner Weihnachtsmarkt auf dem Gehweg der Preußenallee in Westend am vierten Adventswochenende.",
+   "web": {
+    "url": "https://www.family-and-friends-ev.de/blog",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "262",
+   "name": "Weihnachtsbasar im Auswärtigen Amt",
+   "typ": "international",
+   "bezirk": "Mitte",
+   "adresse": "Werderscher Markt 1, 10117 Berlin",
+   "lat": 52.517,
+   "lng": 13.398,
+   "von": "2026-12-04",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1080
+    ],
+    [
+     720,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Basar im Lichthof des Auswärtigen Amts mit Kuriositäten und Weihnachtsdeko aus aller Welt, organisiert vom Förderkreis Eine Welt.",
+   "web": {
+    "url": "https://www.auswaertiges-amt.de/de/aamt/zugastimaa/weihnachten-2565048",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Museumsinsel, U Hausvogteiplatz"
+  },
+  {
+   "id": "231",
+   "name": "Weihnachtsfest der Tiere im Tierheim Berlin",
+   "typ": "kiez",
+   "bezirk": "Lichtenberg",
+   "adresse": "Hausvaterweg 39, 13057 Berlin",
+   "lat": 52.554,
+   "lng": 13.549,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     660,
+     960
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "1 €, Kinder unter 6 Jahren frei"
+   },
+   "text": "Beim Weihnachtsfest der Tiere können Besucher kleine Geschenke für die Tierheimtiere mitbringen. Dazu gibt es Kunsthandwerk, einen Büchermarkt und Geschenkideen für Mensch und Tier.",
+   "web": {
+    "url": "https://tierschutz-berlin.de/aktuelles/das-weihnachtsfest-der-tiere-sucht-dich/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "247",
+   "name": "Weihnachtsfest in der Alten Fasanerie",
+   "typ": "kiez",
+   "bezirk": "Reinickendorf",
+   "adresse": "Fasanerie 10, 13469 Berlin",
+   "lat": 52.61,
+   "lng": 13.33,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     780,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (Angabe von 2025)"
+   },
+   "text": "Familienfreundliches Weihnachtsfest mit Lagerfeuer, Live-Musik und Bühnenprogramm in der Alten Fasanerie in Lübars.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/7826792-3496862-weihnachtsfest-in-der-alten-fasanerie.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "107",
+   "name": "Weihnachtsmarkt Alt-Buckow",
+   "typ": "kiez",
+   "bezirk": "Neukölln",
+   "adresse": "Alt-Buckow 18, 12349 Berlin",
+   "lat": 52.423,
+   "lng": 13.433,
+   "von": "2026-11-27",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kiezweihnachtsmarkt am ersten Adventswochenende in Alt-Buckow mit Ständen voller handgemachter Geschenke und weihnachtlicher Deko.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/weihnachtsmarkt-alt-buckow/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "213",
+   "name": "Weihnachtsmarkt am Alexanderplatz",
+   "typ": "klassiker",
+   "bezirk": "Mitte",
+   "adresse": "Alexanderplatz, 10178 Berlin",
+   "lat": 52.5219,
+   "lng": 13.4132,
+   "von": "2026-11-23",
+   "bis": "2026-12-26",
+   "woche": [
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {
+    "2026-12-24": [
+     660,
+     840
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Traditionelle Weihnachtswelt mit Gassen, Kinderkarussell und Kunsthandwerk am Brunnen der Völkerfreundschaft. An der Weltzeituhr gibt es Streetfood und eine Eisstockbahn.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/3240090-3496862-weihnachtsmarkt-am-alexanderplatz.html",
+    "art": "info"
+   },
+   "oepnv": "S+U Alexanderplatz",
+   "bild": "213"
+  },
+  {
+   "id": "264",
+   "name": "Weihnachtsmarkt am KaDeWe",
+   "typ": "klassiker",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Wittenbergplatz, 10789 Berlin",
+   "lat": 52.5015,
+   "lng": 13.3425,
+   "von": "2026-11-23",
+   "bis": "2027-01-03",
+   "woche": [
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1260
+    ]
+   ],
+   "zu": [],
+   "sonder": {
+    "2026-12-24": [
+     660,
+     900
+    ],
+    "2026-12-25": [
+     780,
+     1260
+    ],
+    "2026-12-26": [
+     780,
+     1260
+    ],
+    "2026-12-31": [
+     660,
+     1620
+    ],
+    "2027-01-01": [
+     780,
+     1320
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weiße Pagodenzelte am Wittenbergplatz zwischen KaDeWe und U-Bahnhof, mit regionalen Spezialitäten, kleiner Bühne und dem energieautarken Riesenrad „Solar Wheel“.",
+   "web": {
+    "url": "https://www.weihnachtsmarkt-am-wittenbergplatz.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Wittenbergplatz",
+   "barrierefrei": true
+  },
+  {
+   "id": "225",
+   "name": "Weihnachtsmarkt am Markusplatz",
+   "typ": "natur",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Heinrich-Seidel-Straße 1, 12167 Berlin",
+   "lat": 52.449,
+   "lng": 13.342,
+   "von": "2026-11-28",
+   "bis": "2026-11-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1260
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Erster Weihnachtsmarkt auf dem Steglitzer Markusplatz mit Fokus auf Nachhaltigkeit: soziale Einrichtungen bieten Deko, Kunsthandwerk und Essen, dazu Upcycling und eine Tauschbörse für Weihnachtsschmuck.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/10754444-3496862-weihnachtsmarkt-am-markusplatz.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "68",
+   "name": "Weihnachtsmarkt am Schloss Charlottenburg",
+   "typ": "klassiker",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Spandauer Damm 20-24, 14059 Berlin",
+   "lat": 52.5195,
+   "lng": 13.295,
+   "von": "2026-11-23",
+   "bis": "2026-12-27",
+   "woche": [
+    [
+     780,
+     1320
+    ],
+    [
+     780,
+     1320
+    ],
+    [
+     780,
+     1320
+    ],
+    [
+     780,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {
+    "2026-12-25": [
+     720,
+     1320
+    ],
+    "2026-12-26": [
+     720,
+     1320
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Vor der Kulisse des beleuchteten Schlosses gibt es Kunsthandwerk, Weihnachtsdeko, Live-Musik, eine Lichtshow und Angebote für Kinder.",
+   "web": {
+    "url": "https://www.schloss-weihnachtsmarkt.de",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true,
+   "bild": "68"
+  },
+  {
+   "id": "95",
+   "name": "Weihnachtsmarkt am Tempelhofer Hafen",
+   "typ": "klassiker",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Tempelhofer Damm 227, 12099 Berlin",
+   "lat": 52.455,
+   "lng": 13.385,
+   "von": "2026-11-23",
+   "bis": "2026-12-30",
+   "woche": [
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     780,
+     1140
+    ]
+   ],
+   "zu": [
+    "2026-12-24",
+    "2026-12-25",
+    "2026-12-26"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weihnachtsmarkt am Tempelhofer Hafen mit Live-Musik und Karussell, gut zu verbinden mit dem Weihnachtseinkauf.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/events/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Ullsteinstr.",
+   "barrierefrei": true,
+   "bild": "95"
+  },
+  {
+   "id": "101",
+   "name": "Weihnachtsmarkt an den Hallen am Borsigturm",
+   "typ": "klassiker",
+   "bezirk": "Reinickendorf",
+   "adresse": "Am Borsigturm 2, 13507 Berlin",
+   "lat": 52.584,
+   "lng": 13.285,
+   "von": "2026-11-23",
+   "bis": "2026-12-30",
+   "woche": [
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     780,
+     1140
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weihnachtsmarkt auf dem Vorplatz der Hallen am Borsigturm in Tegel mit geschmückten Ständen, winterlichen Leckereien und Live-Musik.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/events/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Alt-Tegel, S Tegel",
+   "barrierefrei": true,
+   "bild": "101"
+  },
+  {
+   "id": "143",
+   "name": "Weihnachtsmarkt an der Gedächtniskirche",
+   "typ": "klassiker",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Kurfürstendamm 237, 10789 Berlin",
+   "lat": 52.5048,
+   "lng": 13.335,
+   "von": "2026-11-13",
+   "bis": "2027-01-01",
+   "woche": [
+    [
+     720,
+     1260
+    ],
+    [
+     720,
+     1260
+    ],
+    [
+     720,
+     1260
+    ],
+    [
+     720,
+     1260
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     720,
+     1260
+    ]
+   ],
+   "zu": [
+    "2026-11-15",
+    "2026-11-22"
+   ],
+   "sonder": {
+    "2026-12-24": [
+     660,
+     840
+    ],
+    "2026-12-25": [
+     780,
+     1320
+    ],
+    "2026-12-26": [
+     780,
+     1320
+    ],
+    "2026-12-31": [
+     660,
+     1200
+    ],
+    "2027-01-01": [
+     780,
+     1080
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Rund 100 Stände rund um die Gedächtniskirche mit Handwerkskunst aus aller Welt, Glühweingärten und einem rund 400 Meter langen Lichtteppich. Der Markt ist barrierefrei gestaltet.",
+   "web": {
+    "url": "https://www.schaustellerverband-berlin.de/weihnachtsmarkt-berlin.html",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Kurfürstendamm, S+U Zoologischer Garten",
+   "barrierefrei": true
+  },
+  {
+   "id": "125",
+   "name": "Weihnachtsmarkt an der Lindenkirche",
+   "typ": "kiez",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Homburger Straße 48, 14197 Berlin",
+   "lat": 52.474,
+   "lng": 13.31,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kunsthandwerk, Bücher, Trödel, Cafeteria, Herzhaftes und Glühwein an der Lindenkirche in Wilmersdorf. Zeitgleich ist Tag der offenen Tür in der Kita.",
+   "web": {
+    "url": "https://www.lindenkirche.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Rüdesheimer Platz",
+   "barrierefrei": true
+  },
+  {
+   "id": "266",
+   "name": "Weihnachtsmarkt auf dem Schlossplatz Köpenick",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Grünstraße 11 (Schlossplatz), 12555 Berlin",
+   "lat": 52.443,
+   "lng": 13.576,
+   "von": "2026-12-11",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Freie Träger aus dem Bezirk verkaufen auf der Schlossinsel Kunsthandwerk, Keramik, Kerzen und regionalen Honig. Abends spielen Turmbläser am Schloss.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5666333-3496862-weihnachtsmarkt-auf-dem-schlossplatz-koe.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "29",
+   "name": "Weihnachtsmarkt auf der Dicken Linda",
+   "typ": "kiez",
+   "bezirk": "Neukölln",
+   "adresse": "Kranoldplatz, 12051 Berlin",
+   "lat": 52.466,
+   "lng": 13.438,
+   "von": "2026-12-12",
+   "bis": "2026-12-12",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     600,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Am zweiten Samstag im Advent wird der Wochenmarkt Dicke Linda auf dem Neuköllner Kranoldplatz zum Weihnachtsmarkt.",
+   "web": {
+    "url": "https://www.diemarktplaner.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Neukölln",
+   "barrierefrei": true
+  },
+  {
+   "id": "223",
+   "name": "Weihnachtsmarkt auf der Lohmühleninsel",
+   "typ": "kunst",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Vor dem Schlesischen Tor 2, 10997 Berlin",
+   "lat": 52.498,
+   "lng": 13.458,
+   "von": "2026-11-27",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     960,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Freischwimmer und Ipse richten erstmals gemeinsam einen Markt am Ufer des Flutgrabens aus: Design, Vintage, Kunsthandwerk und Schmuck, dazu Musik, Feuershows und Live-Painting.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/10734992-3496862-weihnachtsmarkt-auf-der-lohmuehleninsel.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "254",
+   "name": "Weihnachtsmarkt auf der Trabrennbahn Karlshorst",
+   "typ": "international",
+   "bezirk": "Lichtenberg",
+   "adresse": "Treskowallee 159, 10318 Berlin",
+   "lat": 52.48,
+   "lng": 13.528,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1260
+    ],
+    [
+     840,
+     1140
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Interkultureller Weihnachtsmarkt unter dem Motto „Die Welt zu Hause in Karlshorst“: neben Lebkuchen und Glühwein gibt es Einblicke in Weihnachtsbräuche anderer Kulturen.",
+   "web": {
+    "url": "https://pferdesportpark-berlin-karlshorst.de/event/weihnachtsmarkt-auf-der-trabrennbahn/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "202",
+   "name": "Weihnachtsmarkt auf Lehmanns Bauernhof",
+   "typ": "natur",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "Alt-Marienfelde 35-37, 12277 Berlin",
+   "lat": 52.4118,
+   "lng": 13.3668,
+   "von": "2026-12-04",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1200
+    ],
+    [
+     720,
+     1200
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Familiärer Markt auf einem denkmalgeschützten Vierseitenhof an der Dorfaue Marienfelde mit Kunsthandwerk, Bühnenprogramm, Märchenerzählerin, Ponyreiten und Hoftieren.",
+   "web": {
+    "url": "https://www.lehmannsbauernhof.de/weihnachtsmarkt",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "38",
+   "name": "Weihnachtsmarkt im Paul Gerhardt Stift",
+   "typ": "kiez",
+   "bezirk": "Mitte",
+   "adresse": "Müllerstraße 56-58, 13349 Berlin",
+   "lat": 52.554,
+   "lng": 13.346,
+   "von": "2026-12-06",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Zum fünften Mal wird das Gelände des Paul Gerhardt Stifts im Wedding zum Weihnachtsmarkt, mit Programm für Groß und Klein.",
+   "web": {
+    "url": "https://www.paulgerhardtstift.de/termine/weihnachtsmarkt-im-paul-gerhardt-stift",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "149",
+   "name": "Weihnachtsmarkt in der Abenteueroase",
+   "typ": "kiez",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Bergstraße 51, 12169 Berlin",
+   "lat": 52.458,
+   "lng": 13.347,
+   "von": "2026-12-05",
+   "bis": "2026-12-05",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1200
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Pfadfindergruppen, Vereine und Jugendeinrichtungen betreiben die Stände auf dem Außengelände der Abenteueroase, mit alkohol- und fleischfreien Leckereien.",
+   "web": {
+    "url": "https://abenteueroase.vcp-bbb.de/",
+    "art": "veranstalter"
+   }
+  },
+  {
+   "id": "89",
+   "name": "Weihnachtsmarkt in der Bölschestraße",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Bölschestraße, 12587 Berlin",
+   "lat": 52.452,
+   "lng": 13.624,
+   "von": "2026-11-27",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1320
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Drei Tage lang wird die beleuchtete Bölschestraße in Friedrichshagen zum Weihnachtsmarkt mit Bühnenprogramm und kulinarischen Ständen.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/events/",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "56",
+   "name": "Weihnachtsmarkt in der freiheit fünfzehn",
+   "typ": "kiez",
+   "bezirk": "Treptow-Köpenick",
+   "adresse": "Freiheit 15, 12555 Berlin",
+   "lat": 52.448,
+   "lng": 13.576,
+   "von": "2026-12-04",
+   "bis": "2026-12-06",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     960,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei. Eisbahn 10 € pro Person und Stunde, ein Glühwein inklusive"
+   },
+   "text": "Stände mit Handgemachtem, Essen und Getränken sowie Kinderprogramm mit Weihnachtsmann und Märchenhütte im Kulturort freiheit fünfzehn in Köpenick.",
+   "web": {
+    "url": "https://freiheit15.com/kulturwelt/weihnachtsmarkt-2026/2026-12-04-16-00",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "167",
+   "name": "Weihnachtsmarkt in der Fundgrube am Oberhafen",
+   "typ": "kiez",
+   "bezirk": "Spandau",
+   "adresse": "Am Oberhafen 16-20, 13597 Berlin",
+   "lat": 52.529,
+   "lng": 13.205,
+   "von": "2026-12-12",
+   "bis": "2026-12-12",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ],
+    null
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Zum ersten Mal wird der Hof der Fundgrube in Spandau zum Weihnachtsmarkt, mit Live-Musik, inklusivem Foodtruck, Schnitzeljagd und Tombola.",
+   "web": {
+    "url": "https://www.johannesstift-diakonie.de/teilhabe-paedagogik/fundgrube",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "312",
+   "name": "Weihnachtsmarkt in der Villa Donnersmarck",
+   "typ": "kiez",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Schädestraße 9, 14165 Berlin",
+   "lat": 52.4319,
+   "lng": 13.2592,
+   "von": "2026-12-13",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     900,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Die Villa Donnersmarck wird zum Weihnachtshaus: Handgemachtes aus Werkstätten und Gruppen für Menschen mit Behinderung, dazu Programm für Kinder.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5703211-3496862-weihnachtsmarkt-in-der-villa-donnersmarc.html",
+    "art": "info"
+   },
+   "oepnv": "S Zehlendorf, S Zehlendorf/Mühlenstr."
+  },
+  {
+   "id": "203",
+   "name": "Weihnachtsmarkt vor dem Bröhan-Museum",
+   "typ": "kunst",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Schloßstraße 1a, 14059 Berlin",
+   "lat": 52.5211,
+   "lng": 13.2958,
+   "von": "2026-12-13",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1080
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kunsthandwerklicher Weihnachtsmarkt vor dem Bröhan-Museum gegenüber dem Schloss Charlottenburg, ebenerdig und gut beleuchtet.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/3659759-3496862-weihnachtsmarkt-vor-dem-broehanmuseum.html",
+    "art": "info"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "265",
+   "name": "Weihnachtsrodeo",
+   "typ": "kunst",
+   "bezirk": "Pankow",
+   "adresse": "Schönhauser Allee 123 (Colosseum), 10437 Berlin",
+   "lat": 52.543,
+   "lng": 13.413,
+   "von": "2026-12-12",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1200
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "ticket",
+    "text": "Ticket nötig, Preise auf der Webseite. Ein Drink am Einlass ist inklusive"
+   },
+   "text": "Designmarkt im Colosseum an der Schönhauser Allee: rund 150 Designerinnen und Designer mit Mode, Schmuck, Kunst und Streetfood.",
+   "web": {
+    "url": "https://www.weihnachtsrodeo.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Schönhauser Allee"
+  },
+  {
+   "id": "83",
+   "name": "Weihnachtsrummel am Alice-Salomon-Platz",
+   "typ": "rummel",
+   "bezirk": "Marzahn-Hellersdorf",
+   "adresse": "Alice-Salomon-Platz, 12627 Berlin",
+   "lat": 52.537,
+   "lng": 13.603,
+   "von": "2026-11-25",
+   "bis": "2026-12-27",
+   "woche": [
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weihnachtsrummel mit Fahrgeschäften und Buden mitten in Hellersdorf, für die ganze Familie.",
+   "web": {
+    "url": "https://www.hauptstadtkultur.berlin/events/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Hellersdorf",
+   "barrierefrei": true
+  },
+  {
+   "id": "214",
+   "name": "WeihnachtsZauber Gendarmenmarkt",
+   "typ": "klassiker",
+   "bezirk": "Mitte",
+   "adresse": "Gendarmenmarkt, 10117 Berlin",
+   "lat": 52.5137,
+   "lng": 13.3926,
+   "von": "2026-11-23",
+   "bis": "2026-12-31",
+   "woche": [
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1380
+    ],
+    [
+     660,
+     1380
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {
+    "2026-12-24": [
+     660,
+     1080
+    ]
+   },
+   "eintritt": {
+    "art": "kosten",
+    "text": "2 €. Mo bis Fr von 11 bis 14 Uhr frei (nicht am 24., 25., 26. und 31.12.). Kinder unter 12 sowie Menschen mit Schwerbehindertenausweis und eine Begleitperson frei"
+   },
+   "text": "Einer der bekanntesten Märkte der Stadt zwischen Deutschem und Französischem Dom, mit täglichem Bühnenprogramm aus Akrobatik, Chören und Musik, Kunsthandwerk und beheizten Zelten.",
+   "web": {
+    "url": "https://www.weihnachtsmarkt-berlin.de/",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Stadtmitte, U Hausvogteiplatz"
+  },
+  {
+   "id": "140",
+   "name": "WEINachten am Ludwig-Beck-Platz",
+   "typ": "kiez",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Ludwig-Beck-Platz, 12203 Berlin",
+   "lat": 52.443,
+   "lng": 13.312,
+   "von": "2026-12-12",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1200
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Kleiner Wein-Nachtsmarkt auf dem Ludwig-Beck-Platz in Lichterfelde am dritten Adventswochenende.",
+   "web": {
+    "url": "https://www.family-and-friends-ev.de/blog",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "59",
+   "name": "Winter am THF",
+   "typ": "kunst",
+   "bezirk": "Tempelhof-Schöneberg",
+   "adresse": "THF Tower, Flughafen Tempelhof, 12101 Berlin",
+   "lat": 52.477,
+   "lng": 13.387,
+   "von": "2026-12-04",
+   "bis": "2026-12-13",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     960,
+     1200
+    ],
+    [
+     720,
+     1200
+    ],
+    [
+     720,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei. Für das Weihnachtssingen am 13.12. braucht man ein Ticket"
+   },
+   "text": "Wintermarkt in der Alten Feuerwache am THF Tower mit Food Court, Designobjekten und Familienprogramm. Am 13. Dezember gibt es ein großes Weihnachtssingen in der Haupthalle.",
+   "web": {
+    "url": "https://www.thf-berlin.de/winter-am-thf",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Paradestr.",
+   "barrierefrei": true,
+   "hinweis": "Nur am 2. und 3. Adventswochenende"
+  },
+  {
+   "id": "224",
+   "name": "Winter Wonderland im Britzer Garten",
+   "typ": "natur",
+   "bezirk": "Neukölln",
+   "adresse": "Britzer Garten, Eingang Mohriner Allee 152, 12347 Berlin",
+   "lat": 52.438,
+   "lng": 13.412,
+   "von": "2026-11-27",
+   "bis": "2026-12-20",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    [
+     600,
+     1200
+    ],
+    [
+     600,
+     1200
+    ],
+    [
+     600,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "kosten",
+    "text": "Eintritt in den Britzer Garten (Tageskarte ab 1 €)"
+   },
+   "text": "Erstmals gibt es am Modellboothafen im Britzer Garten einen kleinen Weihnachtsmarkt mit Seeblick, Live-Musik, Feuershow und Sprechstunde beim Weihnachtsmann.",
+   "web": {
+    "url": "https://www.britzergarten.de/events/eventkalender/detail/2026-11-27_1000/winter-wonderland-3/",
+    "art": "veranstalter"
+   },
+   "hinweis": "Die Eingänge Buckower Damm und Tauernallee schließen um 16 Uhr"
+  },
+  {
+   "id": "212",
+   "name": "Winterlights im Dark Matter",
+   "typ": "rummel",
+   "bezirk": "Lichtenberg",
+   "adresse": "Köpenicker Chaussee 46, 10317 Berlin",
+   "lat": 52.493,
+   "lng": 13.492,
+   "von": "2026-11-04",
+   "bis": "2027-02-14",
+   "woche": [
+    null,
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1320
+    ],
+    [
+     720,
+     1380
+    ],
+    [
+     660,
+     1380
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "ticket",
+    "text": "Ticket nötig, Preise auf der Webseite"
+   },
+   "text": "Kein klassischer Markt, sondern eine Lichtinstallation mit Eisbahn: ein schwebender Wald aus Tannen und Lichtpunkten, dazu Glühwein und Schlittschuhverleih.",
+   "web": {
+    "url": "https://www.darkmatter.berlin/winterlights-26",
+    "art": "veranstalter"
+   },
+   "barrierefrei": true
+  },
+  {
+   "id": "260",
+   "name": "Wintermarkt am ehemaligen Flughafen Tegel",
+   "typ": "kunst",
+   "bezirk": "Reinickendorf",
+   "adresse": "Flughafen Tegel, Gebäude I 1, 13405 Berlin",
+   "lat": 52.56,
+   "lng": 13.288,
+   "von": "2026-11-28",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     840,
+     1320
+    ],
+    [
+     840,
+     1200
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "In der alten Frachtkantine des früheren Flughafens Tegel gibt es rund 30 Stände mit Keramik, Schmuck und nachhaltigen Produkten, einige spenden ihre Einnahmen.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/9964084-3496862-wintermarkt-am-ehemaligen-flughafen-tege.html",
+    "art": "info"
+   }
+  },
+  {
+   "id": "17",
+   "name": "Wintermarkt am Humboldt Forum",
+   "typ": "klassiker",
+   "bezirk": "Mitte",
+   "adresse": "Schlossplatz, 10178 Berlin",
+   "lat": 52.517,
+   "lng": 13.402,
+   "von": "2026-11-18",
+   "bis": "2027-01-03",
+   "woche": [
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-11-22",
+    "2026-12-24"
+   ],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Historischer Wintermarkt auf dem Schlossplatz mit Kunsthandwerk, regionalen Spezialitäten und nostalgischen Fahrgeschäften. Abends wird die Fassade des Humboldt Forums mit Videoprojektionen bespielt.",
+   "web": {
+    "url": "https://www.wollenschlaeger-berlin.de",
+    "art": "veranstalter"
+   },
+   "oepnv": "U Museumsinsel",
+   "barrierefrei": true
+  },
+  {
+   "id": "26",
+   "name": "Winterquartier Berlin",
+   "typ": "rummel",
+   "bezirk": "Friedrichshain-Kreuzberg",
+   "adresse": "Modersohnstraße 35-45, 10245 Berlin",
+   "lat": 52.504,
+   "lng": 13.458,
+   "von": "2026-11-06",
+   "bis": "2027-02-28",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1320
+    ],
+    [
+     720,
+     1320
+    ]
+   ],
+   "zu": [
+    "2026-12-24"
+   ],
+   "sonder": {
+    "2026-12-25": [
+     720,
+     1320
+    ],
+    "2026-12-26": [
+     720,
+     1320
+    ]
+   },
+   "eintritt": {
+    "art": "spende",
+    "text": "Eintritt auf Spendenbasis. Eisbahn ab 6 € für 90 Minuten, Leihschlittschuhe 5 €"
+   },
+   "text": "Wintermarkt mit rund 1.000 Quadratmeter großer Hallen-Eisbahn, Eisstockschießen, Eisdisco und weihnachtlichem Programm im Napoleon Komplex in Friedrichshain.",
+   "web": {
+    "url": "https://winterquartier-berlin.de/",
+    "art": "veranstalter"
+   },
+   "hinweis": "Der Markt ist nur am Wochenende offen, die Eisbahn hat eigene Zeiten"
+  },
+  {
+   "id": "65",
+   "name": "Wintershopping in der Wilmersdorfer Straße",
+   "typ": "klassiker",
+   "bezirk": "Charlottenburg-Wilmersdorf",
+   "adresse": "Wilmersdorfer Straße, 10585 Berlin",
+   "lat": 52.509,
+   "lng": 13.306,
+   "von": "2026-11-13",
+   "bis": "2026-12-24",
+   "woche": [
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     660,
+     1200
+    ],
+    [
+     720,
+     1140
+    ]
+   ],
+   "zu": [
+    "2026-11-15",
+    "2026-11-22"
+   ],
+   "sonder": {
+    "2026-12-24": [
+     600,
+     840
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei (öffentliche Fußgängerzone)"
+   },
+   "text": "Weihnachtsstände in der Fußgängerzone der Wilmersdorfer Straße, ebenerdig und mitten im Einkaufsviertel.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5697424-3496862-weihnachtsmarkt-fussgaengerzone-wilmersd.html",
+    "art": "info"
+   },
+   "oepnv": "U Wilmersdorfer Str., U Bismarckstr.",
+   "barrierefrei": true
+  },
+  {
+   "id": "216",
+   "name": "Winterwelt am Potsdamer Platz",
+   "typ": "klassiker",
+   "bezirk": "Mitte",
+   "adresse": "Alte Potsdamer Straße, 10785 Berlin",
+   "lat": 52.5096,
+   "lng": 13.3759,
+   "von": "2026-11-23",
+   "bis": "2026-12-26",
+   "woche": [
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1320
+    ]
+   ],
+   "zu": [],
+   "sonder": {
+    "2026-12-24": [
+     660,
+     960
+    ]
+   },
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Weihnachtsmarkt zwischen Alter Potsdamer Straße und Marlene-Dietrich-Platz mit mobiler Rodelbahn.",
+   "web": {
+    "url": "https://www.potsdamerplatz.de/de/events/winter-world-2026/",
+    "art": "veranstalter"
+   },
+   "oepnv": "S+U Potsdamer Platz",
+   "bild": "216"
+  },
+  {
+   "id": "272",
+   "name": "Zehlendorfer Weihnachtsmarkt",
+   "typ": "klassiker",
+   "bezirk": "Steglitz-Zehlendorf",
+   "adresse": "Kirchstraße 1, 14163 Berlin",
+   "lat": 52.431,
+   "lng": 13.261,
+   "von": "2026-11-23",
+   "bis": "2026-12-30",
+   "woche": [
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     660,
+     1260
+    ],
+    [
+     720,
+     1320
+    ],
+    [
+     660,
+     1320
+    ],
+    [
+     660,
+     1260
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei. Schlittschuhbahn 2,50 €"
+   },
+   "text": "Fünf Wochen lang vor dem Rathaus Zehlendorf: Kunsthandwerk entlang des Teltower Damms, eine Kunsteisbahn und am Wochenende ab 16 Uhr Bühnenprogramm.",
+   "web": {
+    "url": "https://www.berlin.de/weihnachtsmarkt/5703047-3496862-zehlendorfer-weihnachtsmarkt.html",
+    "art": "info"
+   },
+   "oepnv": "S Zehlendorf"
+  },
+  {
+   "id": "122",
+   "name": "Ökumenischer Adventsbasar in Alt-Lübars",
+   "typ": "kiez",
+   "bezirk": "Reinickendorf",
+   "adresse": "Alt-Lübars 24, 13469 Berlin",
+   "lat": 52.62,
+   "lng": 13.356,
+   "von": "2026-11-29",
+   "bis": "2026-11-29",
+   "woche": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+     720,
+     1020
+    ]
+   ],
+   "zu": [],
+   "sonder": {},
+   "eintritt": {
+    "art": "frei",
+    "text": "Eintritt frei"
+   },
+   "text": "Ökumenischer Adventsbasar im Pfarrgarten im Dorfkern Alt-Lübars, alle Stände sind ebenerdig.",
+   "web": {
+    "url": "https://www.noomi-evangelisch.de",
+    "art": "veranstalter"
+   }
+  }
+ ]
+}

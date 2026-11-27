@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="%LANG_ISO_CODE%">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>%WEB_TITLE%</title>
+    <meta name="description" content="Alle Berliner Weihnachtsmärkte der Saison 2026/27 auf einer Karte, mit Öffnungszeiten, Eintritt und Filter. Private Übersicht, kein Angebot des Landes Berlin." />
+    <meta name="theme-color" content="#B3122E" />
+    <!-- Zum Home-Bildschirm hinzufügen: eigenes Icon und Start ohne Browserleiste -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Weihnachtsmärkte" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Besucherstatistik mit Umami Cloud (Datenregion EU), ohne Cookies. Zählt nur auf der echten Adresse,
+         Suchparameter wie ?id=32 bleiben weg. Wer „Besuche in diesem Browser nicht mitzählen“ antippt, wird nicht gezählt. -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="4d030256-75f6-43c0-a6ba-c1b4344750c7"
+      data-domains="weihnachtsmaerkte-berlin.expo.app"
+      data-exclude-search="true"
+    ></script>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+        background: #ffffff;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      /* Quellenhinweis der Karte etwas zurückhaltender */
+      .leaflet-container .leaflet-control-attribution {
+        font-size: 10px;
+        background: rgba(255, 255, 255, 0.8);
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>Diese Seite braucht JavaScript.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
