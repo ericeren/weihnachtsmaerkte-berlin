@@ -6,6 +6,11 @@
    "lizenz": "CC0 1.0",
    "lizenzUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.de"
   },
+  "44": {
+   "urheber": "Leonhard Lenz",
+   "lizenz": "CC0 1.0",
+   "lizenzUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.de"
+  },
   "68": {
    "urheber": "Heidi zu Klampen",
    "lizenz": "CC BY-SA 3.0",
@@ -2523,7 +2528,8 @@
     "art": "veranstalter"
    },
    "oepnv": "S Hackescher Markt, U Weinmeisterstr.",
-   "barrierefrei": true
+   "barrierefrei": true,
+   "bild": "44"
   },
   {
    "id": "261",

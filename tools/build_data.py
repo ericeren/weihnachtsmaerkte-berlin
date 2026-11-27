@@ -306,9 +306,11 @@ HINWEIS = {
  '158': 'Um 11 Uhr Gottesdienst in der Dorfkirche Marzahn',
 }
 
-# Foto 44 (Sophienstraße) am 27.11.2026 entfernt, weil im Vordergrund Gesichter erkennbar sind.
+# Foto 44 (Sophienstraße): Im Vordergrund des Originals sind Gesichter erkennbar. Seit 27.11.2026
+# zeigt die App deshalb nur einen Ausschnitt oberhalb der Köpfe, siehe AUSSCHNITT.
 BILD = {
  '11': ('Leonhard Lenz', 'CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/deed.de'),
+ '44': ('Leonhard Lenz', 'CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/deed.de'),
  '68': ('Heidi zu Klampen', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0/deed.de'),
  '95': ('Dguendel', 'CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/deed.de'),
  '101': ('Aiken Hartenfels', 'CC BY-SA 3.0 DE', 'https://creativecommons.org/licenses/by-sa/3.0/de/deed.de'),
@@ -430,9 +432,24 @@ json.dump(data, open(dst / 'markets.json', 'w', encoding='utf-8'), ensure_ascii=
 # Bilder kopieren und require-Tabelle schreiben
 img_dst = APP / 'assets/markets'; img_dst.mkdir(parents=True, exist_ok=True)
 lines = ['// Automatisch erzeugt von build_data.py', 'export const IMAGES: Record<string, number> = {']
+# Ausschnitt (links, oben, rechts, unten) in Pixeln des 900 × 600 großen Originals,
+# danach auf 600 × 400 vergrößert und leicht nachgeschärft
+AUSSCHNITT = {'44': (470, 0, 896, 284)}
 for k in sorted(BILD, key=int):
-    if (IMG_SRC / f'{k}.jpg').resolve() != (img_dst / f'{k}.jpg').resolve():
-        shutil.copy(IMG_SRC / f'{k}.jpg', img_dst / f'{k}.jpg')
+    quelle, ziel = IMG_SRC / f'{k}.jpg', img_dst / f'{k}.jpg'
+    if k in AUSSCHNITT:
+        from PIL import Image, ImageFilter
+        im = Image.open(quelle)
+        if im.size == (900, 600):  # Original, sonst ist das Foto schon zugeschnitten
+            im = im.convert('RGB').crop(AUSSCHNITT[k]).resize((600, 400), Image.LANCZOS)
+            im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
+            im.save(ziel, quality=86, optimize=True, progressive=True)
+        else:
+            assert im.size == (600, 400), (k, im.size)
+            if quelle.resolve() != ziel.resolve():
+                shutil.copy(quelle, ziel)
+    elif quelle.resolve() != ziel.resolve():
+        shutil.copy(quelle, ziel)
     lines.append(f"  '{k}': require('../../assets/markets/{k}.jpg'),")
 lines.append('};\n')
 (dst / 'images.ts').write_text('\n'.join(lines), encoding='utf-8')

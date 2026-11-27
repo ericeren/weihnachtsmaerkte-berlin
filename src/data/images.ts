@@ -2,6 +2,7 @@
 export const IMAGES: Record<string, number> = {
   '5': require('../../assets/markets/5.jpg'),
   '11': require('../../assets/markets/11.jpg'),
+  '44': require('../../assets/markets/44.jpg'),
   '68': require('../../assets/markets/68.jpg'),
   '95': require('../../assets/markets/95.jpg'),
   '101': require('../../assets/markets/101.jpg'),
