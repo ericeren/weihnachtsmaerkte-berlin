@@ -11,6 +11,7 @@ Alle Berliner Weihnachtsmärkte der Saison 2026/27 auf einer Karte. Auf einen Bl
 - Filter nach Nähe, Bezirk, Art des Markts und freiem Eintritt.
 - Zu jedem Markt Öffnungszeiten, Adresse, Eintritt, ein Link zum Veranstalter und die Route mit Bus und Bahn.
 - Nach der Hauptsaison ein Rückblick auf den Moment, an dem die meisten Märkte gleichzeitig offen hatten.
+- „Saison in Zahlen“: an welchen Tagen und zu welcher Uhrzeit am meisten offen ist, wie lange die Märkte laufen, wie sie sich auf Bezirke und Arten verteilen. Zu jedem Säulendiagramm gibt es die Zahlen als Tabelle.
 
 ## Daten
 

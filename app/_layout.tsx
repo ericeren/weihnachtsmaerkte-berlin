@@ -48,6 +48,7 @@ export default function RootLayout() {
         >
           <Stack.Screen name="index" options={{ headerShown: false, title: 'Übersicht' }} />
           <Stack.Screen name="markt/[id]" options={{ title: '' }} />
+          <Stack.Screen name="saison" options={{ title: 'Saison in Zahlen' }} />
           <Stack.Screen name="filter" options={{ presentation: 'modal', title: 'Filter', ...webModal }} />
           <Stack.Screen name="info" options={{ presentation: 'modal', title: 'Über die App', ...webModal }} />
         </Stack>

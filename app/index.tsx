@@ -1,7 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Chip from '../src/components/Chip';
@@ -18,6 +18,10 @@ import { colors, font } from '../src/theme';
 
 export default function Home() {
   const insets = useSafeAreaInsets();
+  // Neben Logo und zwei Knöpfen bleiben für den Titel etwa Bildschirmbreite minus 150 Punkte.
+  // „Weihnachtsmärkte“ braucht bei 26 Punkt Schrift rund 240 davon, auf schmalen Geräten wird die Schrift etwas kleiner.
+  const { width } = useWindowDimensions();
+  const titelGroesse = Math.max(20, Math.min(font.title, Math.floor((font.title * (width - 150)) / 245)));
   const { view, setView, filters, setFilters, resetFilters, result, now, requestLocation, setSelectedId } = useStore();
   // Nach der Hauptsaison hilft ein Rückblick auf den Moment, an dem die meisten Märkte offen hatten
   const nachSaison = now.date > HAUPTSAISON_ENDE && filters.when.kind !== 'tag';
@@ -64,11 +68,26 @@ export default function Home() {
         <View style={styles.header}>
           <Logo size={38} />
           <View style={styles.titleBox}>
-            <Text style={styles.title} accessibilityRole="header">
+            <Text
+              style={[styles.title, { fontSize: titelGroesse }]}
+              accessibilityRole="header"
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.8}
+            >
               Weihnachtsmärkte
             </Text>
             <Text style={styles.subtitle}>Berlin, Saison 2026/27</Text>
           </View>
+          <Pressable
+            onPress={() => router.push('/saison')}
+            hitSlop={10}
+            style={styles.statsBtn}
+            accessibilityRole="button"
+            accessibilityLabel="Saison in Zahlen"
+          >
+            <Ionicons name="stats-chart-outline" size={24} color={colors.tinte} />
+          </Pressable>
           <Pressable
             onPress={() => router.push('/info')}
             hitSlop={10}
@@ -164,7 +183,8 @@ const styles = StyleSheet.create({
   titleBox: { flex: 1, marginLeft: 12 },
   title: { fontSize: font.title, fontWeight: '800', color: colors.tinte, letterSpacing: -0.4 },
   subtitle: { fontSize: font.small, color: colors.grau, marginTop: 1 },
-  infoBtn: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center', marginRight: -8 },
+  infoBtn: { width: 36, height: 44, alignItems: 'center', justifyContent: 'center', marginRight: -4 },
+  statsBtn: { width: 36, height: 44, alignItems: 'center', justifyContent: 'center' },
   rule: { height: 3, backgroundColor: colors.rot },
   toolbar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingTop: 12, gap: 10 },
   segment: {
