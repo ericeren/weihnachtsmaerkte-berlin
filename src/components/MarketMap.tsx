@@ -19,6 +19,7 @@ import type { StatusTone } from '../lib/time';
 import { useStore } from '../state/Store';
 import { colors, shadow } from '../theme';
 import type { Market } from '../types';
+import BlasenListe from './BlasenListe';
 import MarketPreview from './MarketPreview';
 
 const PIN: Record<StatusTone, { bg: string; border: string; star: string }> = {
@@ -26,7 +27,7 @@ const PIN: Record<StatusTone, { bg: string; border: string; star: string }> = {
   open: { bg: colors.gruen, border: colors.weiss, star: colors.weiss },
   // Wie alle Markierungen: gefüllter Kreis, weißer Rand, weißer Stern, nur die Füllung zeigt den Stand
   soon: { bg: colors.rot, border: colors.weiss, star: colors.weiss },
-  later: { bg: '#6B7079', border: colors.weiss, star: colors.weiss },
+  later: { bg: colors.grauZu, border: colors.weiss, star: colors.weiss },
   ended: { bg: colors.grauHell, border: colors.weiss, star: colors.weiss },
 };
 
@@ -80,18 +81,20 @@ const Pin = memo(function Pin({
 const BLASE: Record<BlasenStand, { bg: string; border: string; text: string }> = {
   offen: { bg: colors.gruen, border: colors.weiss, text: colors.weiss },
   heute: { bg: colors.rot, border: colors.weiss, text: colors.weiss },
-  zu: { bg: '#6B7079', border: colors.weiss, text: colors.weiss },
+  zu: { bg: colors.grauZu, border: colors.weiss, text: colors.weiss },
 };
 
-/** Zahlenblase auf der Karte, Farben aus BLASE */
+/** Zahlenblase auf der Karte, Farben aus BLASE. Ist ihre Liste offen, hat sie einen dunklen Ring. */
 const Blase = memo(function Blase({
   g,
   stand,
+  aktiv,
   name,
   onPress,
 }: {
   g: Gruppe;
   stand: BlasenStand;
+  aktiv: boolean;
   /** Anzahl und Stand für VoiceOver */
   name: string;
   onPress: (g: Gruppe) => void;
@@ -107,20 +110,22 @@ const Blase = memo(function Blase({
       zIndex={stand === 'offen' ? 4 : stand === 'heute' ? 3 : 2}
       accessibilityLabel={name}
     >
-      <View
-        style={[
-          styles.blase,
-          { width: size, height: size, borderRadius: size / 2, backgroundColor: c.bg, borderColor: c.border },
-        ]}
-      >
-        <Text style={[styles.blaseText, { color: c.text, fontSize: n >= 10 ? 14 : 15 }]}>{n}</Text>
+      <View style={aktiv ? [styles.blaseRing, { width: size + 8, height: size + 8, borderRadius: (size + 8) / 2 }] : null}>
+        <View
+          style={[
+            styles.blase,
+            { width: size, height: size, borderRadius: size / 2, backgroundColor: c.bg, borderColor: c.border },
+          ]}
+        >
+          <Text style={[styles.blaseText, { color: c.text, fontSize: n >= 10 ? 14 : 15 }]}>{n}</Text>
+        </View>
       </View>
     </Marker>
   );
 });
 
 export default function MarketMap() {
-  const { result, now, pos, selectedId, setSelectedId, requestLocation, focusToken, filters } = useStore();
+  const { result, now, pos, selectedId, setSelectedId, requestLocation, focusOn, focusToken, filters } = useStore();
   const insets = useSafeAreaInsets();
   const mapRef = useRef<MapView>(null);
   const lastMarkerPress = useRef(0);
@@ -130,7 +135,12 @@ export default function MarketMap() {
   // Zuletzt gezeigter Ausschnitt, für Plus und Minus
   const ausschnitt = useRef<Region>(BERLIN_REGION);
   // Höhe von Karte und Vorschaukarte, damit Plus und Minus über der Vorschau stehen
-  const [hoehe, setHoehe] = useState({ karte: 0, vorschau: 0 });
+  const [hoehe, setHoehe] = useState({ karte: 0, vorschau: 0, legende: 0, liste: 0 });
+  const hoeheRef = useRef(hoehe);
+  hoeheRef.current = hoehe;
+  // Offene Liste einer Zahlenblase. Ein Tipp auf die Blase zoomt nicht mehr, sondern zeigt ihre Märkte als Liste.
+  const [blase, setBlase] = useState<string[] | null>(null);
+  const blasenKey = blase ? blase.join('.') : '';
   const markets = result.list;
   const selected = markets.find((m) => m.id === selectedId) ?? null;
   const day = filters.when.kind === 'tag' ? filters.when.date : null;
@@ -150,6 +160,7 @@ export default function MarketMap() {
 
   const onMarker = (id: string) => {
     lastMarkerPress.current = Date.now();
+    setBlase(null);
     setSelectedId(id);
   };
 
@@ -171,22 +182,35 @@ export default function MarketMap() {
     [markets, selectedId, zoom, tones],
   );
 
-  // Ein Tipp auf die Blase zoomt so weit hinein, dass ihre Märkte auseinanderrücken
-  const aufklappen = useCallback(
+  // Ein Tipp auf die Blase öffnet die Liste ihrer Märkte. Die Karte zoomt nicht. Liegt die Blase dort,
+  // wo die Liste aufgeht, rückt die Karte nur nach oben, damit die Blase sichtbar bleibt.
+  const oeffnen = useCallback(
     (g: Gruppe) => {
       lastMarkerPress.current = Date.now();
-      mapRef.current?.fitToCoordinates(
-        g.ids.map((id) => byId.get(id)!).map((m) => ({ latitude: m.lat, longitude: m.lng })),
-        { edgePadding: { top: 110, right: 70, bottom: 110, left: 70 }, animated: true },
-      );
+      setSelectedId(null);
+      setBlase(g.ids);
+      const r = ausschnitt.current;
+      const vonOben = (r.latitude + r.latitudeDelta / 2 - g.lat) / r.latitudeDelta;
+      if (vonOben > 0.4) mapRef.current?.animateToRegion({ ...r, latitude: g.lat - 0.25 * r.latitudeDelta }, 350);
     },
-    [byId],
+    [setSelectedId],
   );
+
+  // „Heranzoomen“ in der Liste zoomt so weit hinein, dass die Märkte der Blase auseinanderrücken
+  const heranzoomen = useCallback((ms: Market[]) => {
+    lastMarkerPress.current = Date.now();
+    mapRef.current?.fitToCoordinates(
+      ms.map((m) => ({ latitude: m.lat, longitude: m.lng })),
+      { edgePadding: { top: 110, right: 70, bottom: 110, left: 70 }, animated: true },
+    );
+  }, []);
 
   // Bei geänderter Auswahl durch Filter auf die Treffer zoomen
   const idsKey = markets.map((m) => m.id).join(',');
   const firstRun = useRef(true);
   useEffect(() => {
+    // Mit anderen Treffern passt eine offene Liste nicht mehr
+    setBlase(null);
     if (firstRun.current) {
       firstRun.current = false;
       return;
@@ -206,15 +230,41 @@ export default function MarketMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idsKey]);
 
-  // Aus der Detailansicht: "Auf der Karte zeigen"
+  // Die Vorschaukarte darf den gewählten Markt nicht verdecken. Er kommt in die Mitte der freien Fläche über ihr,
+  // gerechnet mit der gemessenen Höhe von Karte und Vorschau.
+  // zoomen: „Auf der Karte zeigen“ und Markt aus der Liste einer Blase. Sonst, beim Antippen eines Sterns,
+  // rückt die Karte nur, wenn die Vorschau ihn verdecken würde.
+  const ausrichten = useRef<string | null>(null);
+  const vorschauFuer = useRef<string | null>(null);
+  const legeFrei = (m: Market, vorschau: number, zoomen: boolean) => {
+    const karte = hoeheRef.current.karte;
+    if (!karte) return;
+    const frei = karte - (insets.bottom + 10) - vorschau - 10;
+    const anteil = Math.max(40, frei / 2) / karte;
+    if (zoomen) {
+      mapRef.current?.animateToRegion(
+        { latitude: m.lat + (anteil - 0.5) * 0.025, longitude: m.lng, latitudeDelta: 0.025, longitudeDelta: 0.025 },
+        450,
+      );
+      return;
+    }
+    const r = ausschnitt.current;
+    const vonOben = (r.latitude + r.latitudeDelta / 2 - m.lat) / r.latitudeDelta;
+    if (vonOben * karte > frei - 20) mapRef.current?.animateToRegion({ ...r, latitude: m.lat + (anteil - 0.5) * r.latitudeDelta }, 300);
+  };
+
+  // Aus der Detailansicht „Auf der Karte zeigen“ und aus der Liste einer Blase
   useEffect(() => {
     if (!focusToken || !selectedId) return;
-    const m = markets.find((x) => x.id === selectedId);
+    const m = byId.get(selectedId);
     if (!m) return;
-    mapRef.current?.animateToRegion(
-      { latitude: m.lat - 0.004, longitude: m.lng, latitudeDelta: 0.025, longitudeDelta: 0.025 },
-      450,
-    );
+    if (vorschauFuer.current === m.id && hoeheRef.current.vorschau) {
+      legeFrei(m, hoeheRef.current.vorschau, true);
+      return;
+    }
+    // Die Vorschau ist noch nicht gemessen: erst grob setzen, genau ausgerichtet wird, sobald sie gemessen ist
+    ausrichten.current = m.id;
+    legeFrei(m, Math.round(hoeheRef.current.karte * 0.6), true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusToken]);
 
@@ -236,7 +286,13 @@ export default function MarketMap() {
     );
   };
   const zoomUnten = insets.bottom + 10 + (selected ? hoehe.vorschau + 10 : 0);
-  const zoomSichtbar = !selected || hoehe.karte - zoomUnten - 88 >= 112;
+  // Die Legende wird nie halb verdeckt: Reicht die Vorschau oder die Liste einer Blase bis an sie heran,
+  // ist sie so lange ganz weg.
+  const kartenHoehe = selected ? hoehe.vorschau : blase ? hoehe.liste : 0;
+  const legendeSichtbar = !kartenHoehe || hoehe.karte - (insets.bottom + 10) - kartenHoehe >= 10 + hoehe.legende + 8;
+  // Bei offener Liste einer Blase bleiben Plus und Minus weg, dort gibt es „Heranzoomen“
+  const zoomSichtbar = !blase && (!selected || hoehe.karte - zoomUnten - 88 >= 112);
+  const blasenMaerkte = blase ? blase.flatMap((id) => (byId.has(id) ? [byId.get(id)!] : [])) : [];
 
   const showMe = async () => {
     const p = pos ?? (await requestLocation());
@@ -268,7 +324,10 @@ export default function MarketMap() {
         toolbarEnabled={false}
         userInterfaceStyle="light"
         onPress={() => {
-          if (Date.now() - lastMarkerPress.current > 400) setSelectedId(null);
+          if (Date.now() - lastMarkerPress.current > 400) {
+            setSelectedId(null);
+            setBlase(null);
+          }
         }}
         onRegionChangeComplete={(r) => {
           ausschnitt.current = r;
@@ -293,11 +352,12 @@ export default function MarketMap() {
           const { stand, offen, heute } = blasenStand(g.ids, tones);
           return (
             <Blase
-              key={`b-${g.ids.join('.')}-${stand}`}
+              key={`b-${g.ids.join('.')}-${stand}-${g.ids.join('.') === blasenKey ? 1 : 0}`}
               g={g}
               stand={stand}
+              aktiv={g.ids.join('.') === blasenKey}
               name={blasenText(g.ids.length, offen, fest, heute)}
-              onPress={aufklappen}
+              onPress={oeffnen}
             />
           );
         })}
@@ -313,7 +373,15 @@ export default function MarketMap() {
         ) : null}
       </MapView>
 
-      <View style={styles.legend} pointerEvents="none">
+      <View
+        style={[styles.legend, !legendeSichtbar && styles.versteckt]}
+        pointerEvents="none"
+        aria-hidden={!legendeSichtbar}
+        onLayout={(e) => {
+          const h = e.nativeEvent.layout.height;
+          setHoehe((x) => (x.legende === h ? x : { ...x, legende: h }));
+        }}
+      >
         <View style={styles.legendRow}>
           <View style={[styles.legendDot, { backgroundColor: colors.gruen }]} />
           <Text style={styles.legendText}>{fest ?? 'Jetzt offen'}</Text>
@@ -328,7 +396,7 @@ export default function MarketMap() {
               <Text style={styles.legendText}>Öffnet heute noch</Text>
             </View>
             <View style={styles.legendRow}>
-              <View style={[styles.legendDot, styles.legendDotKlein, { backgroundColor: '#6B7079' }]} />
+              <View style={[styles.legendDot, { backgroundColor: colors.grauZu }]} />
               <Text style={styles.legendText}>Heute geschlossen</Text>
             </View>
           </>
@@ -346,8 +414,18 @@ export default function MarketMap() {
 
       {selected ? (
         <View
+          key={selected.id}
           style={[styles.preview, { bottom: insets.bottom + 10 }]}
-          onLayout={(e) => setHoehe((h) => ({ ...h, vorschau: e.nativeEvent.layout.height }))}
+          onLayout={(e) => {
+            const h = e.nativeEvent.layout.height;
+            setHoehe((x) => ({ ...x, vorschau: h }));
+            const neu = vorschauFuer.current !== selected.id;
+            vorschauFuer.current = selected.id;
+            if (ausrichten.current === selected.id) {
+              ausrichten.current = null;
+              legeFrei(selected, h, true);
+            } else if (neu) legeFrei(selected, h, false);
+          }}
         >
           <MarketPreview
             m={selected}
@@ -355,6 +433,36 @@ export default function MarketMap() {
             day={day}
             distanceKm={pos ? result.distances[selected.id] : undefined}
             onClose={() => setSelectedId(null)}
+          />
+        </View>
+      ) : null}
+
+      {blase && blasenMaerkte.length ? (
+        <View
+          style={[styles.preview, { bottom: insets.bottom + 10 }]}
+          onLayout={(e) => {
+            const h = e.nativeEvent.layout.height;
+            setHoehe((x) => (x.liste === h ? x : { ...x, liste: h }));
+          }}
+        >
+          <BlasenListe
+            maerkte={blasenMaerkte}
+            tones={tones}
+            fest={fest}
+            now={now}
+            day={day}
+            distances={pos ? result.distances : undefined}
+            maxHeight={Math.max(220, Math.round(hoehe.karte * 0.6))}
+            fokus={false}
+            onWaehlen={(id) => {
+              setBlase(null);
+              focusOn(id);
+            }}
+            onHeranzoomen={() => {
+              setBlase(null);
+              heranzoomen(blasenMaerkte);
+            }}
+            onSchliessen={() => setBlase(null)}
           />
         </View>
       ) : null}
@@ -408,6 +516,7 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   blaseText: { fontWeight: '800' },
+  blaseRing: { borderWidth: 3, borderColor: colors.tinte, alignItems: 'center', justifyContent: 'center' },
   legend: {
     position: 'absolute',
     left: 10,
@@ -419,8 +528,9 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   legendRow: { flexDirection: 'row', alignItems: 'center', marginVertical: 2 },
+  // Unsichtbar statt entfernt, damit die gemessene Höhe bleibt und nichts flackert
+  versteckt: { opacity: 0 },
   legendDot: { width: 12, height: 12, borderRadius: 6, marginRight: 7 },
-  legendDotKlein: { width: 9, height: 9, borderRadius: 4.5, marginLeft: 1.5, marginRight: 8.5 },
   legendText: { fontSize: 13, color: colors.tinte },
   tools: { position: 'absolute', right: 10, top: 10, gap: 8 },
   tool: {

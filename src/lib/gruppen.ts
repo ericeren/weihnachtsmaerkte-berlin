@@ -133,7 +133,7 @@ export function blasenStand(
   return { stand: offen ? 'offen' : heute ? 'heute' : 'zu', offen, heute };
 }
 
-/** Text für Bildschirmleser, etwa „8 Märkte, davon 3 jetzt offen. Karte hier vergrößern“ */
+/** Text für Bildschirmleser, etwa „8 Märkte, davon 3 jetzt offen. Liste öffnen“ */
 export function blasenText(anzahl: number, offen: number, fest: string | null, heute = 0): string {
   const stand = fest
     ? fest.charAt(0).toLowerCase() + fest.slice(1)
@@ -142,5 +142,5 @@ export function blasenText(anzahl: number, offen: number, fest: string | null, h
       : heute > 0
         ? `keiner jetzt offen, ${heute === 1 ? '1 öffnet' : `${heute} öffnen`} heute noch`
         : 'keiner jetzt offen';
-  return `${anzahl} Märkte, ${stand}. Karte hier vergrößern`;
+  return `${anzahl} Märkte, ${stand}. Liste öffnen`;
 }

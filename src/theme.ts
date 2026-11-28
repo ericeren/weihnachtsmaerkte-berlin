@@ -7,6 +7,8 @@ export const colors = {
   rotHell: '#FBEAED',
   tinte: '#1A1C20',
   grau: '#5E636B',
+  /** „Heute geschlossen“ auf der Karte und in den Listen, weiße Schrift darauf und es selbst auf Weiß 5:1 */
+  grauZu: '#6B7079',
   grauHell: '#8C9199',
   /** warmes Grau für Linien und Flächen, passend zu Creme */
   linie: '#E3DACB',

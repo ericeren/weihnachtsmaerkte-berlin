@@ -5,9 +5,11 @@ import { colors } from '../theme';
 
 const TONES: Record<StatusTone, { bg: string; fg: string; dot: string }> = {
   open: { bg: colors.gruenHell, fg: colors.gruen, dot: colors.gruen },
-  soon: { bg: colors.gelbHell, fg: colors.gelb, dot: '#D08A00' },
-  later: { bg: colors.flaeche, fg: colors.grau, dot: colors.grauHell },
-  ended: { bg: colors.flaeche, fg: colors.grauHell, dot: colors.grauHell },
+  // „Heute noch“ rot wie auf der Karte, so hat Eric es gewählt
+  soon: { bg: colors.rotHell, fg: colors.rot, dot: colors.rot },
+  // Punkt im Grau der Karte. Die Schrift bleibt etwas dunkler, damit sie auf der Fläche gut lesbar ist.
+  later: { bg: colors.flaeche, fg: colors.grau, dot: colors.grauZu },
+  ended: { bg: colors.flaeche, fg: colors.grau, dot: colors.grauHell },
 };
 
 export default function StatusPill({ tone, label }: { tone: StatusTone; label: string }) {
@@ -24,9 +26,9 @@ export default function StatusPill({ tone, label }: { tone: StatusTone; label: s
 
 export const TONE_COLOR: Record<StatusTone, string> = {
   open: colors.gruen,
-  soon: '#D08A00',
-  later: colors.linie,
-  ended: colors.linie,
+  soon: colors.rot,
+  later: colors.grauZu,
+  ended: colors.grauHell,
 };
 
 const styles = StyleSheet.create({
