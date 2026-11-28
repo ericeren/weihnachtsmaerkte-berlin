@@ -15,4 +15,4 @@ Alle Fotos stammen von Wikimedia Commons. Sie wurden zugeschnitten und verkleine
 | 217.jpg | Lucia Weihnachtsmarkt in der Kulturbrauerei | Auto1234 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.de) |
 | 242.jpg | Spandauer Weihnachtsmarkt in der Altstadt | Colin Smith | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.de) |
 
-Von 44.jpg zeigt die App nur den Ausschnitt oberhalb der Köpfe, weil im Vordergrund des Originals Gesichter erkennbar sind. Der Ausschnitt steht in `tools/build_data.py` unter `AUSSCHNITT`.
+Von 5.jpg, 44.jpg und 68.jpg zeigt die App nur einen Ausschnitt oberhalb der Köpfe, weil im Vordergrund der Originale Gesichter erkennbar sind. Die Ausschnitte stehen in `tools/build_data.py` unter `AUSSCHNITT`.

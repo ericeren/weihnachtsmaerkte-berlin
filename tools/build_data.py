@@ -306,8 +306,9 @@ HINWEIS = {
  '158': 'Um 11 Uhr Gottesdienst in der Dorfkirche Marzahn',
 }
 
-# Foto 44 (Sophienstraße): Im Vordergrund des Originals sind Gesichter erkennbar. Seit 27.11.2026
-# zeigt die App deshalb nur einen Ausschnitt oberhalb der Köpfe, siehe AUSSCHNITT.
+# Fotos 5 (Mexikoplatz), 44 (Sophienstraße) und 68 (Schloss Charlottenburg): Im Vordergrund der
+# Originale sind Gesichter erkennbar. Die App zeigt deshalb nur einen Ausschnitt oberhalb der Köpfe,
+# bei 44 seit 27.11.2026, bei 5 und 68 seit 28.11.2026, siehe AUSSCHNITT.
 BILD = {
  '11': ('Leonhard Lenz', 'CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/deed.de'),
  '44': ('Leonhard Lenz', 'CC0 1.0', 'https://creativecommons.org/publicdomain/zero/1.0/deed.de'),
@@ -432,16 +433,24 @@ json.dump(data, open(dst / 'markets.json', 'w', encoding='utf-8'), ensure_ascii=
 # Bilder kopieren und require-Tabelle schreiben
 img_dst = APP / 'assets/markets'; img_dst.mkdir(parents=True, exist_ok=True)
 lines = ['// Automatisch erzeugt von build_data.py', 'export const IMAGES: Record<string, number> = {']
-# Ausschnitt (links, oben, rechts, unten) in Pixeln des 900 × 600 großen Originals,
-# danach auf 600 × 400 vergrößert und leicht nachgeschärft
-AUSSCHNITT = {'44': (470, 0, 896, 284)}
+# Ausschnitt (links, oben, rechts, unten) in Pixeln des Originals, danach auf 600 × 400 gebracht
+# und leicht nachgeschärft. Geschnitten wird nur, solange die Datei noch das Original ist, erkannt an
+# Größe und, wo angegeben, Prüfsumme (MD5). Sonst liegt der Ausschnitt schon vor und wird nur kopiert.
+AUSSCHNITT = {
+ '5': ((640, 426), '9b4cdffb106983a88916e239a5ff6af7', (200, 10, 600, 277)),
+ '44': ((900, 600), None, (470, 0, 896, 284)),
+ '68': ((600, 400), 'd11cf42ac438f2ff051d140cf8f8ec52', (140, 0, 590, 300)),
+}
 for k in sorted(BILD, key=int):
     quelle, ziel = IMG_SRC / f'{k}.jpg', img_dst / f'{k}.jpg'
     if k in AUSSCHNITT:
+        import hashlib
         from PIL import Image, ImageFilter
+        groesse, pruefsumme, box = AUSSCHNITT[k]
         im = Image.open(quelle)
-        if im.size == (900, 600):  # Original, sonst ist das Foto schon zugeschnitten
-            im = im.convert('RGB').crop(AUSSCHNITT[k]).resize((600, 400), Image.LANCZOS)
+        original = im.size == groesse and (pruefsumme is None or hashlib.md5(quelle.read_bytes()).hexdigest() == pruefsumme)
+        if original:
+            im = im.convert('RGB').crop(box).resize((600, 400), Image.LANCZOS)
             im = im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=60, threshold=2))
             im.save(ziel, quality=86, optimize=True, progressive=True)
         else:
