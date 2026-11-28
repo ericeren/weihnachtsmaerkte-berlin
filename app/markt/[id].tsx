@@ -1,6 +1,6 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Image } from 'expo-image';
-import { router, useLocalSearchParams } from 'expo-router';
+import { router, Stack, useLocalSearchParams } from 'expo-router';
 import { useEffect, type ComponentProps, type ReactNode } from 'react';
 import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -96,6 +96,7 @@ export default function MarketDetail() {
   if (!m) {
     return (
       <View style={styles.missing}>
+        <Stack.Screen options={{ title: 'Markt nicht gefunden' }} />
         <Text style={styles.missingText}>Diesen Markt gibt es nicht mehr in der Liste.</Text>
       </View>
     );
@@ -119,6 +120,8 @@ export default function MarketDetail() {
       contentInsetAdjustmentBehavior="automatic"
       contentContainerStyle={{ paddingBottom: insets.bottom + 32 }}
     >
+      {/* Im grünen Kopf steht der Name neben dem Pfeil, wie auf den anderen Seiten. Lange Namen enden dort mit „…“. */}
+      <Stack.Screen options={{ title: m.name }} />
       {img ? (
         <View>
           <Image source={img} style={styles.hero} contentFit="cover" transition={200} accessibilityLabel={`Foto: ${m.name}`} />
@@ -136,9 +139,8 @@ export default function MarketDetail() {
         <Text style={styles.kicker}>
           {TYP_LABEL[m.typ]}, {m.bezirk}
         </Text>
-        <Text style={styles.title} accessibilityRole="header">
-          {m.name}
-        </Text>
+        {/* Hier steht der Name ganz. Als Überschrift zählt für Bildschirmleser schon der Kopf, also nicht doppelt. */}
+        <Text style={styles.title}>{m.name}</Text>
         <View style={styles.statusRow}>
           <StatusPill tone={st.tone} label={st.label} />
           {dist !== undefined ? <Text style={styles.dist}>{distanceText(dist)} entfernt</Text> : null}
@@ -236,7 +238,7 @@ export default function MarketDetail() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.weiss },
+  screen: { flex: 1, backgroundColor: colors.creme },
   hero: { width: '100%', aspectRatio: 3 / 2, backgroundColor: colors.flaeche },
   credit: { fontSize: 12, color: colors.grau, paddingHorizontal: 16, paddingTop: 6 },
   body: { paddingHorizontal: 16, paddingTop: 14 },

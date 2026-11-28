@@ -214,7 +214,7 @@ export default function Saison() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.weiss },
+  screen: { flex: 1, backgroundColor: colors.creme },
   content: { padding: 16 },
   inner: { width: '100%', maxWidth: 720, alignSelf: 'center' },
   lead: { fontSize: font.body, lineHeight: 23, color: colors.tinte, marginBottom: 14 },

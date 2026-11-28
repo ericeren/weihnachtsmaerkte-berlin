@@ -177,7 +177,7 @@ export function plural(n: number, one: string, many: string): string {
 
 /**
  * Legt der Filter einen Zeitpunkt oder einen anderen Tag fest, hat jeder angezeigte Markt dann offen.
- * Die Karte zeigt dann alle Sterne rot mit dieser einen Legendenzeile, auch beim Rückblick nach der Saison.
+ * Die Karte zeigt dann alle Sterne grün mit dieser einen Legendenzeile, auch beim Rückblick nach der Saison.
  * Sonst null, dann zählt jetzt.
  */
 export function fixedLegend(f: Filters, now: Moment): string | null {

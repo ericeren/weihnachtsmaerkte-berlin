@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
   flaeche: { flex: 1 },
   plot: { height: PLOT_HOEHE },
   // gewählte Spalte: ein heller Streifen hinter den Säulen, etwas kräftiger als die Fläche der Kacheln
-  markierung: { position: 'absolute', top: 0, bottom: 0, backgroundColor: '#E9EBEE', borderRadius: 3 },
+  markierung: { position: 'absolute', top: 0, bottom: 0, backgroundColor: colors.cremeDunkel, borderRadius: 3 },
   gitter: { position: 'absolute', left: 0, right: 0, height: StyleSheet.hairlineWidth, backgroundColor: colors.linie },
   ticks: { height: 20 },
   tickText: {
@@ -314,11 +314,13 @@ const styles = StyleSheet.create({
   kachel: {
     flexGrow: 1,
     flexBasis: '45%',
-    backgroundColor: colors.flaeche,
+    backgroundColor: colors.weiss,
+    borderWidth: 1,
+    borderColor: colors.linie,
     borderRadius: 10,
     padding: 12,
   },
-  kachelGedrueckt: { backgroundColor: colors.linie },
+  kachelGedrueckt: { backgroundColor: colors.creme },
   kachelWert: { fontSize: 30, fontWeight: '800', color: colors.tinte, letterSpacing: -0.5 },
   kachelText: { fontSize: font.tiny, lineHeight: 18, color: colors.grau, marginTop: 2 },
   kachelLink: { flexDirection: 'row', alignItems: 'center', gap: 2, marginTop: 6 },

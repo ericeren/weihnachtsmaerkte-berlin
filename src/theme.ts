@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 
-/** Sachliche Farbwelt: Weiß, Tinte, ein kräftiges Rot. */
+/** Farbwelt: Weiß, Tinte, ein kräftiges Rot. Dazu Tannengrün für den Kopf und Creme für die Übersicht. */
 export const colors = {
   rot: '#B3122E',
   rotDunkel: '#8E0E24',
@@ -8,13 +8,23 @@ export const colors = {
   tinte: '#1A1C20',
   grau: '#5E636B',
   grauHell: '#8C9199',
-  linie: '#DFE2E6',
-  flaeche: '#F2F3F5',
+  /** warmes Grau für Linien und Flächen, passend zu Creme */
+  linie: '#E3DACB',
+  flaeche: '#EFE9DD',
   weiss: '#FFFFFF',
   gruen: '#17703F',
   gruenHell: '#E4F2EA',
   gelb: '#7A5200',
   gelbHell: '#FFF1D6',
+  /** Kopf der Übersicht, weiße Schrift darauf hat einen Kontrast von 12:1 */
+  tanne: '#1E3B2C',
+  /** Skyline im Kopf, nur Schmuck */
+  tanneHell: '#2D5340',
+  /** Untertitel im Kopf, 8:1 auf Tanne */
+  kopfGrau: '#C5D6CA',
+  creme: '#F5F0E6',
+  cremeDunkel: '#EAE2D3',
+  linieWarm: '#DDD3C2',
 };
 
 export const font = {
@@ -36,3 +46,6 @@ export const shadow = Platform.select({
 });
 
 export const radius = 10;
+
+/** Höhe des grünen Kopfs ohne Statusleiste, auf der Übersicht und allen Unterseiten gleich */
+export const kopfHoehe = 74;
