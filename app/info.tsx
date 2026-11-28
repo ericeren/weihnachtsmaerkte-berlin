@@ -1,7 +1,6 @@
 import Constants from 'expo-constants';
-import { router, Stack } from 'expo-router';
 import { useState, type ReactNode } from 'react';
-import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Logo from '../src/components/Logo';
@@ -75,20 +74,6 @@ export default function Info() {
       contentInsetAdjustmentBehavior="automatic"
       contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + 32 }]}
     >
-      <Stack.Screen
-        options={{
-          headerRight: () => (
-            <Pressable
-              onPress={() => router.back()}
-              hitSlop={10}
-              accessibilityRole="button"
-              style={IS_WEB ? styles.doneWeb : undefined}
-            >
-              <Text style={styles.done}>Fertig</Text>
-            </Pressable>
-          ),
-        }}
-      />
       <View style={styles.brand}>
         <Logo size={56} />
         <View style={styles.brandText}>
@@ -181,11 +166,8 @@ export default function Info() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.weiss },
+  screen: { flex: 1, backgroundColor: colors.creme },
   content: { padding: 16 },
-  done: { fontSize: 17, fontWeight: '600', color: colors.rot },
-  // Auf der Webseite fehlt der Randabstand, den iOS in der App von selbst setzt
-  doneWeb: { paddingHorizontal: 16 },
   brand: { flexDirection: 'row', alignItems: 'center', gap: 14, marginBottom: 16 },
   brandText: { flex: 1 },
   title: { fontSize: 22, fontWeight: '800', color: colors.tinte },

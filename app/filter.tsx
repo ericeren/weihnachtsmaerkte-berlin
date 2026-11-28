@@ -1,5 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { router, Stack } from 'expo-router';
+import { router } from 'expo-router';
 import { useState, type ReactNode } from 'react';
 import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -33,10 +33,15 @@ function SwitchRow({ label, value, onChange }: { label: string; value: boolean; 
   return (
     <View style={styles.switchRow}>
       <Text style={styles.switchLabel}>{label}</Text>
+      {/* Eingeschaltet rot wie die gewählten Filter, der Knopf immer weiß, so wollte Eric es.
+          activeThumbColor gibt es nur im Browser, ohne ihn wäre der Knopf dort türkis. */}
       <Switch
         value={value}
         onValueChange={onChange}
         trackColor={{ true: colors.rot, false: colors.linie }}
+        thumbColor={colors.weiss}
+        ios_backgroundColor={colors.linie}
+        {...({ activeThumbColor: colors.weiss } as object)}
         accessibilityLabel={label}
       />
     </View>
@@ -82,20 +87,6 @@ export default function FilterScreen() {
 
   return (
     <View style={styles.screen}>
-      <Stack.Screen
-        options={{
-          headerRight: () => (
-            <Pressable
-              onPress={() => router.back()}
-              hitSlop={10}
-              accessibilityRole="button"
-              style={IS_WEB ? styles.doneWeb : undefined}
-            >
-              <Text style={styles.done}>Fertig</Text>
-            </Pressable>
-          ),
-        }}
-      />
       <ScrollView contentInsetAdjustmentBehavior="automatic" contentContainerStyle={styles.content}>
         <Block title="Wann?">
           <View style={styles.wrap}>
@@ -200,11 +191,8 @@ export default function FilterScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.weiss },
+  screen: { flex: 1, backgroundColor: colors.creme },
   content: { padding: 16, paddingBottom: 32 },
-  done: { fontSize: 17, fontWeight: '600', color: colors.rot },
-  // Auf der Webseite fehlt der Randabstand, den iOS in der App von selbst setzt
-  doneWeb: { paddingHorizontal: 16 },
   block: { marginBottom: 26 },
   blockTitle: { fontSize: 18, fontWeight: '700', color: colors.tinte, marginBottom: 10 },
   hint: { fontSize: 14, color: colors.grau, marginTop: -4, marginBottom: 10, lineHeight: 19 },
@@ -242,7 +230,7 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: colors.linie,
-    backgroundColor: colors.weiss,
+    backgroundColor: colors.creme,
   },
   barReset: {
     minHeight: 48,
@@ -250,6 +238,7 @@ const styles = StyleSheet.create({
     borderRadius: radius,
     borderWidth: 1,
     borderColor: colors.linie,
+    backgroundColor: colors.weiss,
     justifyContent: 'center',
   },
   barResetText: { fontSize: 16, fontWeight: '600', color: colors.tinte },

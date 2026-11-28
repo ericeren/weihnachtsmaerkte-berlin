@@ -4,14 +4,12 @@ import { useMemo } from 'react';
 import { Platform, View } from 'react-native';
 import { SafeAreaInsetsContext, useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import Seitenkopf, { type SeitenkopfProps } from '../src/components/Seitenkopf';
 import { StoreProvider } from '../src/state/Store';
 import { colors } from '../src/theme';
 
 // Ein Direktlink auf einen Markt legt die Übersicht darunter, damit es einen Weg zurück gibt.
 export const unstable_settings = { initialRouteName: 'index' };
-
-// Auf der Webseite sehen Filter und Info aus wie in der App: Titel mittig, kein zusätzlicher Zurück-Pfeil.
-const webModal = Platform.OS === 'web' ? { headerLeft: () => null, headerTitleAlign: 'center' as const } : {};
 
 // iOS 26 legt in Apps vom Home-Bildschirm unter der Statusleiste einen weichen Schleier über den
 // oberen Rand der Seite, rund 40 Punkte hoch. Dort bleibt deshalb nur weißer Grund stehen, Titel
@@ -31,17 +29,24 @@ function Seiten() {
   return (
     <Stack
       screenOptions={{
-        headerTintColor: colors.rot,
-        headerTitleStyle: { color: colors.tinte },
+        // Wie die Übersicht: grüner Kopf mit derselben Skyline und roter Linie, darunter Creme.
+        // Alle Unterseiten gleich: links der Pfeil zurück, daneben die Überschrift. Deshalb öffnen
+        // auch Filter und Info als normale Seite und nicht mehr als Blatt mit „Fertig“.
+        header: (p) => <Seitenkopf {...(p as unknown as SeitenkopfProps)} />,
+        headerStyle: { backgroundColor: colors.tanne },
+        headerTintColor: colors.weiss,
+        headerTitleStyle: { color: colors.weiss },
+        headerShadowVisible: false,
         headerBackTitle: 'Zurück',
-        contentStyle: { backgroundColor: colors.weiss },
+        contentStyle: { backgroundColor: colors.creme },
       }}
     >
       <Stack.Screen name="index" options={{ headerShown: false, title: 'Übersicht' }} />
-      <Stack.Screen name="markt/[id]" options={{ title: '', headerTitle: () => null }} />
+      {/* Den Namen des Markts setzt die Seite selbst */}
+      <Stack.Screen name="markt/[id]" options={{ title: '' }} />
       <Stack.Screen name="saison" options={{ title: 'Saison in Zahlen' }} />
-      <Stack.Screen name="filter" options={{ presentation: 'modal', title: 'Filter', ...webModal }} />
-      <Stack.Screen name="info" options={{ presentation: 'modal', title: 'Über die App', ...webModal }} />
+      <Stack.Screen name="filter" options={{ title: 'Filter' }} />
+      <Stack.Screen name="info" options={{ title: 'Über die App' }} />
     </Stack>
   );
 }
@@ -56,7 +61,8 @@ export default function RootLayout() {
   return (
     <SafeAreaInsetsContext.Provider value={appInsets}>
       <StoreProvider>
-        <StatusBar style="dark" />
+        {/* Alle Seiten haben einen grünen Kopf, deshalb helle Statusleiste */}
+        <StatusBar style="light" />
         {Platform.OS === 'web' ? (
           // Im Web liegt alles in einem Hauptbereich, auch der Kopf der Seiten. So finden Bildschirmleser den Inhalt.
           <View style={{ flex: 1 }} role="main">

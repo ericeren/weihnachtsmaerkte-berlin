@@ -51,7 +51,7 @@ Mit `npx expo start` läuft die App über Expo Go auf dem iPhone. `npx expo expo
 
 ## Entstehung
 
-Die Idee stammt von Eric Eren. Wer auf einem Weihnachtsmarkt steht und weiterziehen will, soll schnell sehen, welcher Markt in der Nähe gerade offen hat. Den Code hat Claude geschrieben, ein KI-Assistent von Anthropic, nach Erics Vorgaben. Auch der Abgleich der Daten mit den Seiten der Veranstalter und die Kurzbeschreibungen der Märkte stammen von Claude. Eric hat die App auf dem iPhone und im Browser getestet und über Aufbau, Texte und Funktionen entschieden.
+Die Idee stammt von Eric Eren. Wer auf einem Weihnachtsmarkt steht und weiterziehen will, soll schnell sehen, welcher Markt in der Nähe gerade offen hat. Den Code hat Claude geschrieben, ein KI-Assistent von Anthropic, nach Erics Vorgaben. Auch der Abgleich der Daten mit den Seiten der Veranstalter und die Kurzbeschreibungen der Märkte stammen von Claude. Eric hat die App auf dem iPhone und im Browser getestet und über Aufbau, Texte und Funktionen entschieden. Das Aussehen der Startseite mit grünem Kopf, Skyline und Zahlenblasen geht auf einen Entwurf zurück, den Eric mit ChatGPT von OpenAI erstellt hat. Umgesetzt hat ihn Claude, ebenso das Logo mit dem Fernsehturm als Christbaumkugel.
 
 ## Lizenzen
 

@@ -1,11 +1,20 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { memo, useEffect, useMemo, useRef } from 'react';
-import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Alert, Pressable, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import MapView, { Marker, type Region } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { BERLIN_REGION } from '../lib/geo';
 import { fixedLegend, statusNow } from '../lib/format';
+import {
+  blasenStand,
+  blasenText,
+  gruppieren,
+  sternRadius,
+  zoomAusBreite,
+  type BlasenStand,
+  type Gruppe,
+} from '../lib/gruppen';
 import type { StatusTone } from '../lib/time';
 import { useStore } from '../state/Store';
 import { colors, shadow } from '../theme';
@@ -13,8 +22,10 @@ import type { Market } from '../types';
 import MarketPreview from './MarketPreview';
 
 const PIN: Record<StatusTone, { bg: string; border: string; star: string }> = {
-  open: { bg: colors.rot, border: colors.weiss, star: colors.weiss },
-  soon: { bg: colors.weiss, border: colors.rot, star: colors.rot },
+  // Jetzt offen ist grün, im selben Grün wie „Jetzt geöffnet“ in der Liste, so hat Eric es gewählt
+  open: { bg: colors.gruen, border: colors.weiss, star: colors.weiss },
+  // Wie alle Markierungen: gefüllter Kreis, weißer Rand, weißer Stern, nur die Füllung zeigt den Stand
+  soon: { bg: colors.rot, border: colors.weiss, star: colors.weiss },
   later: { bg: '#6B7079', border: colors.weiss, star: colors.weiss },
   ended: { bg: colors.grauHell, border: colors.weiss, star: colors.weiss },
 };
@@ -45,14 +56,64 @@ const Pin = memo(function Pin({
       zIndex={selected ? 1000 : tone === 'open' ? 3 : tone === 'soon' ? 2 : 1}
       accessibilityLabel={name}
     >
+      {/* Tippfläche mindestens 24 Punkte, auch wenn der Stern kleiner gezeichnet ist */}
+      <View style={[styles.pinFlaeche, { width: Math.max(size, 24), height: Math.max(size, 24) }]}>
+        <View
+          style={[
+            styles.pin,
+            { width: size, height: size, borderRadius: size / 2, backgroundColor: c.bg, borderColor: c.border },
+            selected && styles.pinSelected,
+          ]}
+        >
+          <Text style={[styles.pinStar, { color: c.star, fontSize: selected ? 19 : klein ? 11 : 14 }]}>★</Text>
+        </View>
+      </View>
+    </Marker>
+  );
+});
+
+/**
+ * Zahlenblase für mehrere Märkte, gezeichnet wie die Sterne: grün gefüllt, wenn einer davon jetzt offen hat,
+ * rot gefüllt, wenn sonst einer heute noch öffnet, grau gefüllt, wenn heute keiner mehr öffnet. Rand und Zahl
+ * sind immer weiß, so hat Eric es gewählt. Bei Rot-Grün-Schwäche sehen Grün und Rot ähnlich aus.
+ */
+const BLASE: Record<BlasenStand, { bg: string; border: string; text: string }> = {
+  offen: { bg: colors.gruen, border: colors.weiss, text: colors.weiss },
+  heute: { bg: colors.rot, border: colors.weiss, text: colors.weiss },
+  zu: { bg: '#6B7079', border: colors.weiss, text: colors.weiss },
+};
+
+/** Zahlenblase auf der Karte, Farben aus BLASE */
+const Blase = memo(function Blase({
+  g,
+  stand,
+  name,
+  onPress,
+}: {
+  g: Gruppe;
+  stand: BlasenStand;
+  /** Anzahl und Stand für VoiceOver */
+  name: string;
+  onPress: (g: Gruppe) => void;
+}) {
+  const n = g.ids.length;
+  const size = n >= 10 ? 38 : 34;
+  const c = BLASE[stand];
+  return (
+    <Marker
+      coordinate={{ latitude: g.lat, longitude: g.lng }}
+      onPress={() => onPress(g)}
+      tracksViewChanges={false}
+      zIndex={stand === 'offen' ? 4 : stand === 'heute' ? 3 : 2}
+      accessibilityLabel={name}
+    >
       <View
         style={[
-          styles.pin,
+          styles.blase,
           { width: size, height: size, borderRadius: size / 2, backgroundColor: c.bg, borderColor: c.border },
-          selected && styles.pinSelected,
         ]}
       >
-        <Text style={[styles.pinStar, { color: c.star, fontSize: selected ? 19 : klein ? 11 : 14 }]}>★</Text>
+        <Text style={[styles.blaseText, { color: c.text, fontSize: n >= 10 ? 14 : 15 }]}>{n}</Text>
       </View>
     </Marker>
   );
@@ -63,6 +124,13 @@ export default function MarketMap() {
   const insets = useSafeAreaInsets();
   const mapRef = useRef<MapView>(null);
   const lastMarkerPress = useRef(0);
+  // Zoomstufe aus dem Kartenausschnitt, danach richten sich die Zahlenblasen. Die Karte ist so breit wie der Bildschirm.
+  const { width } = useWindowDimensions();
+  const [zoom, setZoom] = useState(() => zoomAusBreite(BERLIN_REGION.longitudeDelta, width));
+  // Zuletzt gezeigter Ausschnitt, für Plus und Minus
+  const ausschnitt = useRef<Region>(BERLIN_REGION);
+  // Höhe von Karte und Vorschaukarte, damit Plus und Minus über der Vorschau stehen
+  const [hoehe, setHoehe] = useState({ karte: 0, vorschau: 0 });
   const markets = result.list;
   const selected = markets.find((m) => m.id === selectedId) ?? null;
   const day = filters.when.kind === 'tag' ? filters.when.date : null;
@@ -84,6 +152,36 @@ export default function MarketMap() {
     lastMarkerPress.current = Date.now();
     setSelectedId(id);
   };
+
+  // Märkte, deren Sterne sich berühren, kommen in eine Zahlenblase. Der ausgewählte Markt bleibt immer einzeln.
+  const byId = useMemo(() => new Map(markets.map((m) => [m.id, m])), [markets]);
+  const gruppen = useMemo(
+    () =>
+      gruppieren(
+          markets
+            .filter((m) => m.id !== selectedId)
+            .map((m) => ({
+              id: m.id,
+              lat: m.lat,
+              lng: m.lng,
+              r: sternRadius(tones[m.id] === 'later' || tones[m.id] === 'ended'),
+            })),
+          zoom,
+        ),
+    [markets, selectedId, zoom, tones],
+  );
+
+  // Ein Tipp auf die Blase zoomt so weit hinein, dass ihre Märkte auseinanderrücken
+  const aufklappen = useCallback(
+    (g: Gruppe) => {
+      lastMarkerPress.current = Date.now();
+      mapRef.current?.fitToCoordinates(
+        g.ids.map((id) => byId.get(id)!).map((m) => ({ latitude: m.lat, longitude: m.lng })),
+        { edgePadding: { top: 110, right: 70, bottom: 110, left: 70 }, animated: true },
+      );
+    },
+    [byId],
+  );
 
   // Bei geänderter Auswahl durch Filter auf die Treffer zoomen
   const idsKey = markets.map((m) => m.id).join(',');
@@ -122,6 +220,24 @@ export default function MarketMap() {
 
   const showBerlin = () => mapRef.current?.animateToRegion(BERLIN_REGION, 450);
 
+  // Plus und Minus unten rechts wie früher bei Google Maps: halber oder doppelter Ausschnitt.
+  // Ist zwischen Vorschaukarte und den Knöpfen oben rechts kein Platz, bleiben sie weg.
+  const zoomen = (rein: boolean) => {
+    const r = ausschnitt.current;
+    const f = rein ? 0.5 : 2;
+    mapRef.current?.animateToRegion(
+      {
+        latitude: r.latitude,
+        longitude: r.longitude,
+        latitudeDelta: Math.min(r.latitudeDelta * f, 3),
+        longitudeDelta: Math.min(r.longitudeDelta * f, 3),
+      },
+      250,
+    );
+  };
+  const zoomUnten = insets.bottom + 10 + (selected ? hoehe.vorschau + 10 : 0);
+  const zoomSichtbar = !selected || hoehe.karte - zoomUnten - 88 >= 112;
+
   const showMe = async () => {
     const p = pos ?? (await requestLocation());
     if (!p) {
@@ -138,7 +254,7 @@ export default function MarketMap() {
   };
 
   return (
-    <View style={styles.wrap}>
+    <View style={styles.wrap} onLayout={(e) => setHoehe((h) => ({ ...h, karte: e.nativeEvent.layout.height }))}>
       <MapView
         ref={mapRef}
         style={StyleSheet.absoluteFill}
@@ -154,33 +270,66 @@ export default function MarketMap() {
         onPress={() => {
           if (Date.now() - lastMarkerPress.current > 400) setSelectedId(null);
         }}
+        onRegionChangeComplete={(r) => {
+          ausschnitt.current = r;
+          const z = Math.round(zoomAusBreite(r.longitudeDelta, width) * 4) / 4;
+          setZoom((alt) => (alt === z ? alt : z));
+        }}
       >
-        {markets.map((m) => (
+        {gruppen.map((g) => {
+          if (g.ids.length === 1) {
+            const m = byId.get(g.ids[0])!;
+            return (
+              <Pin
+                key={`${m.id}-${tones[m.id]}-0`}
+                m={m}
+                tone={tones[m.id]}
+                selected={false}
+                onPress={onMarker}
+                name={namen[m.id]}
+              />
+            );
+          }
+          const { stand, offen, heute } = blasenStand(g.ids, tones);
+          return (
+            <Blase
+              key={`b-${g.ids.join('.')}-${stand}`}
+              g={g}
+              stand={stand}
+              name={blasenText(g.ids.length, offen, fest, heute)}
+              onPress={aufklappen}
+            />
+          );
+        })}
+        {selected ? (
           <Pin
-            key={`${m.id}-${tones[m.id]}-${m.id === selectedId ? 1 : 0}`}
-            m={m}
-            tone={tones[m.id]}
-            selected={m.id === selectedId}
+            key={`${selected.id}-${tones[selected.id]}-1`}
+            m={selected}
+            tone={tones[selected.id]}
+            selected
             onPress={onMarker}
-            name={namen[m.id]}
+            name={namen[selected.id]}
           />
-        ))}
+        ) : null}
       </MapView>
 
       <View style={styles.legend} pointerEvents="none">
         <View style={styles.legendRow}>
-          <View style={[styles.legendDot, { backgroundColor: colors.rot }]} />
+          <View style={[styles.legendDot, { backgroundColor: colors.gruen }]} />
           <Text style={styles.legendText}>{fest ?? 'Jetzt offen'}</Text>
         </View>
+        {/* Die Farben gelten immer für jetzt und heute, auch wenn ein Filter wie „Wochenende“ an ist.
+            Die Zahlenblasen erklärt die Legende bewusst nicht: Eine Zahl auf der Karte versteht man so, und die
+            Farben zeigen wie bei den Sternen, ob dort jetzt einer offen hat oder heute noch einer öffnet. */}
         {fest ? null : (
           <>
             <View style={styles.legendRow}>
-              <View style={[styles.legendDot, { backgroundColor: colors.weiss, borderColor: colors.rot, borderWidth: 2 }]} />
-              <Text style={styles.legendText}>Heute später</Text>
+              <View style={[styles.legendDot, { backgroundColor: colors.rot }]} />
+              <Text style={styles.legendText}>Öffnet heute noch</Text>
             </View>
             <View style={styles.legendRow}>
               <View style={[styles.legendDot, styles.legendDotKlein, { backgroundColor: '#6B7079' }]} />
-              <Text style={styles.legendText}>Andere Tage</Text>
+              <Text style={styles.legendText}>Heute geschlossen</Text>
             </View>
           </>
         )}
@@ -196,7 +345,10 @@ export default function MarketMap() {
       </View>
 
       {selected ? (
-        <View style={[styles.preview, { bottom: insets.bottom + 10 }]}>
+        <View
+          style={[styles.preview, { bottom: insets.bottom + 10 }]}
+          onLayout={(e) => setHoehe((h) => ({ ...h, vorschau: e.nativeEvent.layout.height }))}
+        >
           <MarketPreview
             m={selected}
             now={now}
@@ -204,6 +356,28 @@ export default function MarketMap() {
             distanceKm={pos ? result.distances[selected.id] : undefined}
             onClose={() => setSelectedId(null)}
           />
+        </View>
+      ) : null}
+
+      {zoomSichtbar ? (
+        <View style={[styles.zoom, { bottom: zoomUnten }]}>
+          <Pressable
+            style={styles.zoomBtn}
+            onPress={() => zoomen(true)}
+            accessibilityRole="button"
+            accessibilityLabel="Hineinzoomen"
+          >
+            <Ionicons name="add" size={26} color={colors.tinte} />
+          </Pressable>
+          <View style={styles.zoomLinie} />
+          <Pressable
+            style={styles.zoomBtn}
+            onPress={() => zoomen(false)}
+            accessibilityRole="button"
+            accessibilityLabel="Herauszoomen"
+          >
+            <Ionicons name="remove" size={26} color={colors.tinte} />
+          </Pressable>
         </View>
       ) : null}
 
@@ -225,7 +399,15 @@ const styles = StyleSheet.create({
     ...shadow,
   },
   pinSelected: { borderWidth: 3 },
+  pinFlaeche: { alignItems: 'center', justifyContent: 'center' },
   pinStar: { fontWeight: '700', marginTop: -1 },
+  blase: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 3,
+    ...shadow,
+  },
+  blaseText: { fontWeight: '800' },
   legend: {
     position: 'absolute',
     left: 10,
@@ -250,6 +432,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     ...shadow,
   },
+  zoom: {
+    position: 'absolute',
+    right: 10,
+    zIndex: 2,
+    width: 44,
+    borderRadius: 22,
+    backgroundColor: colors.weiss,
+    ...shadow,
+  },
+  zoomBtn: { width: 44, height: 44, alignItems: 'center', justifyContent: 'center' },
+  zoomLinie: { height: StyleSheet.hairlineWidth, backgroundColor: colors.linie, marginHorizontal: 8 },
   preview: { position: 'absolute', left: 10, right: 10 },
   empty: {
     position: 'absolute',

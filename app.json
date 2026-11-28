@@ -24,7 +24,7 @@
     "android": {
       "package": "de.ericeren.weihnachtsmaerkte",
       "adaptiveIcon": {
-        "backgroundColor": "#B3122E",
+        "backgroundColor": "#1E3B2C",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -44,8 +44,8 @@
       "name": "Weihnachtsmärkte Berlin",
       "shortName": "Weihnachtsmärkte",
       "lang": "de",
-      "themeColor": "#B3122E",
-      "backgroundColor": "#FFFFFF",
+      "themeColor": "#1E3B2C",
+      "backgroundColor": "#F5F0E6",
       "description": "Alle Berliner Weihnachtsmärkte der Saison 2026/27 auf einer Karte. Private Übersicht, kein Angebot des Landes Berlin."
     },
     "plugins": [
@@ -58,7 +58,7 @@
         {
           "image": "./assets/splash-icon.png",
           "imageWidth": 150,
-          "backgroundColor": "#B3122E",
+          "backgroundColor": "#1E3B2C",
           "resizeMode": "contain"
         }
       ],
