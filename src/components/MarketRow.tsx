@@ -15,18 +15,20 @@ interface Props {
   /** bei Datumsfilter: Zeiten an diesem Tag zeigen */
   day: string | null;
   distanceKm?: number;
+  /** Ohne Angabe öffnet ein Tipp die Detailseite, in der Liste einer Zahlenblase zeigt er den Markt auf der Karte */
+  onPress?: () => void;
 }
 
-function MarketRow({ m, now, day, distanceKm }: Props) {
+function MarketRow({ m, now, day, distanceKm, onPress }: Props) {
   const st = statusNow(m, now);
   const dayText = day && day !== now.date ? hoursOn(m, day, now.date) : null;
   const free = m.eintritt.art === 'frei' || m.eintritt.art === 'spende';
   const toneText =
-    st.tone === 'open' ? colors.gruen : st.tone === 'soon' ? colors.gelb : colors.grau;
+    st.tone === 'open' ? colors.gruen : st.tone === 'soon' ? colors.rot : colors.grauZu;
 
   return (
     <Pressable
-      onPress={() => router.push(`/markt/${m.id}`)}
+      onPress={onPress ?? (() => router.push(`/markt/${m.id}`))}
       style={({ pressed }) => [styles.row, pressed && styles.pressed]}
       accessibilityRole="button"
     >
